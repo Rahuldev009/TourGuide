@@ -58,6 +58,7 @@ public class User {
 	}
 	
 	public void addToVisitedLocations(VisitedLocation visitedLocation) {
+		//System.out.println("$$$$$$$$$$$$$$$$$");
 		visitedLocations.add(visitedLocation);
 	}
 	

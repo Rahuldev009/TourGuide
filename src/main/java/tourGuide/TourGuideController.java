@@ -9,29 +9,30 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.reactive.function.client.WebClient;
 import tourGuide.dto.NearbyAttractionDto;
+import tourGuide.service.GpsUtilService;
+import tourGuide.service.RewardCentralService;
 import tourGuide.service.RewardsService;
 import tourGuide.service.TourGuideService;
 import tourGuide.user.User;
-import tourGuide.util.Utilities;
 import tripPricer.Provider;
 
 import java.util.*;
 
 @RestController
 public class TourGuideController {
-    TourGuideService tourGuideService;
-    RewardsService rewardsService;
-    WebClient.Builder webClientBuilder;
-    Utilities utilities;
+    private TourGuideService tourGuideService;
+    private RewardsService rewardsService;
+    private GpsUtilService gpsUtilService;
+    private RewardCentralService rewardCentralService;
 
     @Autowired
-    public void TourGuideController(TourGuideService tourGuideService, RewardsService rewardsService, WebClient.Builder webClientBuilder, Utilities utilities) {
+    public TourGuideController(TourGuideService tourGuideService, RewardsService rewardsService,
+                               GpsUtilService gpsUtilService, RewardCentralService rewardCentralService) {
         this.tourGuideService = tourGuideService;
         this.rewardsService = rewardsService;
-        this.webClientBuilder = webClientBuilder;
-        this.utilities = utilities;
+        this.gpsUtilService = gpsUtilService;
+        this.rewardCentralService = rewardCentralService;
     }
 
     @RequestMapping("/")
@@ -55,53 +56,40 @@ public class TourGuideController {
     // The reward points for visiting each Attraction.
     //    Note: Attraction reward points can be gathered from RewardsCentral
     @RequestMapping("/getNearbyAttractions")
-    public String getNearbyAttractions(@RequestParam String userName) throws JsonProcessingException {
+    public String getNearbyAttractions(@RequestParam String userName){
         User user = tourGuideService.getUser(userName);
         Location userLocation = user.getLastVisitedLocation().location;
         List<NearbyAttractionDto> nearbyAttractionDtos = new ArrayList<>();
         PriorityQueue<NearbyAttractionDto> priorityQueue = new PriorityQueue<>(5, new Comparator<NearbyAttractionDto>() {
             @Override
             public int compare(NearbyAttractionDto o1, NearbyAttractionDto o2) {
-                if(o1.getDistance()>o2.getDistance())
+                if (o1.getDistance() > o2.getDistance())
                     return 1;
-                else if (o1.getDistance()<o2.getDistance())
+                else if (o1.getDistance() < o2.getDistance())
                     return -1;
                 return 0;
             }
         });
-
-//       String s1 =webClientBuilder.build()
-//                .get()
-//                .uri("http://localhost:8081/getAttractions")
-//                .retrieve()
-//                .bodyToMono(String.class)
-//                .block();
-//
-//        Gson gson = new Gson();
-//        List<Attraction> attractionList = gson.fromJson(s1, new TypeToken<List<Attraction>>(){}.getType());
-//        System.out.println("Attraction object --------"+ attractionList.get(2).attractionName);
-
-        List<Attraction> attractionList = utilities.getAttractionList();
+        List<Attraction> attractionList = gpsUtilService.getAttractions();
 
         for (int i = 0; i < attractionList.size(); i++) {
             NearbyAttractionDto nearbyAttractionDto = new NearbyAttractionDto();
-            nearbyAttractionDto.setAttractionName(attractionList.get(i).attractionName);
+            Attraction attraction = attractionList.get(i);
+            nearbyAttractionDto.setAttractionName(attraction.attractionName);
             nearbyAttractionDto.setUserLocation(userLocation);
-            Location location = new Location(attractionList.get(i).latitude,attractionList.get(i).longitude);
+            Location location = new Location(attraction.latitude, attraction.longitude);
             nearbyAttractionDto.setAttractionLocation(location);
-            double distance = rewardsService.getDistance(nearbyAttractionDto.getUserLocation(),nearbyAttractionDto.getAttractionLocation());
+            double distance = rewardsService.getDistance(nearbyAttractionDto.getUserLocation(), nearbyAttractionDto.getAttractionLocation());
             nearbyAttractionDto.setDistance(distance);
-            int rewardsPoints = utilities.getAttractionRewardPoints(attractionList.get(i).attractionId,user.getUserId());
+            int rewardsPoints = rewardCentralService.getAttractionRewardPoints(attraction.attractionId, user.getUserId());
             nearbyAttractionDto.setRewardPoints(rewardsPoints);
             priorityQueue.add(nearbyAttractionDto);
         }
-
-        for (int i = 0; i <5 ; i++) {
-            nearbyAttractionDtos.add(priorityQueue.poll()) ;
+        for (int i = 0; i < 5; i++) {
+            nearbyAttractionDtos.add(priorityQueue.poll());
         }
         return JsonStream.serialize(nearbyAttractionDtos);
     }
-
 
     @RequestMapping("/getRewards")
     public String getRewards(@RequestParam String userName) {
@@ -120,7 +108,7 @@ public class TourGuideController {
         //        ...
         //     }
         List<User> userList = tourGuideService.getAllUsers();
-        HashMap<String,Location> locationList = new HashMap();
+        HashMap<String, Location> locationList = new HashMap();
         for (int i = 0; i < userList.size(); i++) {
             String userId = userList.get(i).getUserId().toString();
             Location location = userList.get(i).getLastVisitedLocation().location;
