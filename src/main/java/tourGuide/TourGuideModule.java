@@ -1,40 +1,44 @@
 package tourGuide;
 
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import gpsUtil.GpsUtil;
-import org.springframework.web.reactive.function.client.WebClient;
-import rewardCentral.RewardCentral;
+import tourGuide.service.GpsUtilService;
+import tourGuide.service.RewardCentralService;
 import tourGuide.service.RewardsService;
-import tourGuide.util.Utilities;
+import tourGuide.service.TourGuideService;
+
 
 @Configuration
 public class TourGuideModule {
-	
-	@Bean
-	public GpsUtil getGpsUtil() {
-		return new GpsUtil();
-	}
-	
-	@Bean
-	public RewardsService getRewardsService() {
-		return new RewardsService(getGpsUtil(), getRewardCentral());
-	}
-	
-	@Bean
-	public RewardCentral getRewardCentral() {
-		return new RewardCentral();
-	}
 
-	@Bean
-	public WebClient.Builder getWebClientBuilder(){
-		return WebClient.builder();
-	}
 
-	@Bean
-	public Utilities utilities(){
-		return new Utilities();
-	}
+
+    //TODO: Remove this from here
+
+
+//    @Bean
+//    public GpsUtilService gpsUtilService() {
+//        return new GpsUtilService();
+//    }
+//    @Bean
+//    public RewardCentralService rewardCentralService() {
+//        return new RewardCentralService();
+//    }
+//    @Bean
+//	public RewardsService rewardsService() {
+//		return new RewardsService(gpsUtilService,rewardCentralService);
+//	}
+//
+//    @Bean
+//    public TourGuideService tourGuideService(){
+//        return new TourGuideService(rewardsService(),gpsUtilService);
+//    }
+
+//	@Bean
+//	public WebClient.Builder getWebClientBuilder(){
+//		return WebClient.builder();
+//	}
 
 }

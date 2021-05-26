@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Utilities.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">TourGuide</a> &gt; <a href="index.source.html" class="el_package">tourGuide.util</a> &gt; <span class="el_source">Utilities.java</span></div><h1>Utilities.java</h1><pre class="source lang-java linenums">package tourGuide.util;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.sun.jndi.toolkit.url.Uri;
+import gpsUtil.location.Attraction;
+import gpsUtil.location.VisitedLocation;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.reactive.function.client.WebClient;
+
+import java.util.List;
+import java.util.UUID;
+
+//@Service
+<span class="nc" id="L17">public class Utilities {</span>
+
+//   private WebClient.Builder webClientBuilder = WebClient.builder();;
+
+//    @Autowired
+//    public Utilities(WebClient.Builder webClientBuilder) {
+//        this.webClientBuilder = webClientBuilder;
+//    }
+
+//    //TODO: Difference b/w static and non static methods - When to use which
+//    //TODO: Dependency injection - Working
+//    public static List&lt;Attraction&gt; getAttractions(){
+//       //TODO: Write loggers for printing the time taken for this API call
+//        WebClient.Builder webClientBuilder = WebClient.builder();
+//        String jsonResponseFromGetAttraction = webClientBuilder.build()
+//                .get()
+//                .uri(&quot;http://localhost:8081/getAttractions&quot;)
+//                .retrieve()
+//                .bodyToMono(String.class)
+//                .block();
+//
+//        Gson gson = new Gson();
+//        List&lt;Attraction&gt; attractionList = gson.fromJson(jsonResponseFromGetAttraction,
+//                new TypeToken&lt;List&lt;Attraction&gt;&gt;(){}.getType());
+//        return attractionList;
+//    }
+//
+//    public VisitedLocation getUserLocation(@RequestParam UUID userId) {
+//        WebClient.Builder webClientBuilder = WebClient.builder();
+//        String JsonResponseFrom = webClientBuilder.build()
+//                .get()
+//                .uri(&quot;http://localhost:8081/getUserLocation?userId=&quot;+userId)
+//                .retrieve()
+//                .bodyToMono(String.class)
+//                .block();
+//        Gson gson = new Gson();
+//        return gson.fromJson(JsonResponseFrom, VisitedLocation.class);
+//    }
+//
+//    public int getAttractionRewardPoints(UUID attractionId, UUID userId){
+//        WebClient.Builder webClientBuilder = WebClient.builder();
+//       //TODO: 1. Write loggers to print response times 2. Use url parameters option instead of appending to the URL
+//       String JsonResponseFrom =webClientBuilder.build()
+//                .get()
+//                .uri(&quot;http://localhost:8082/getAttractionRewardPoints?attractionId=&quot;+attractionId+&quot;&amp;userId=&quot;+userId)
+//                .retrieve()
+//                .bodyToMono(String.class)
+//                .block();
+//        return Integer.parseInt(JsonResponseFrom);
+//
+//    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
