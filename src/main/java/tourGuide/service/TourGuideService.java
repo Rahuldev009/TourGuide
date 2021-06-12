@@ -1,12 +1,13 @@
 package tourGuide.service;
 
-import gpsUtil.location.Attraction;
-import gpsUtil.location.Location;
-import gpsUtil.location.VisitedLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import tourGuide.dto.NearbyAttractionDto;
+import tourGuide.gpsUtil.Attraction;
+import tourGuide.gpsUtil.Location;
+import tourGuide.gpsUtil.VisitedLocation;
 import tourGuide.helper.InternalTestHelper;
 import tourGuide.tracker.Tracker;
 import tourGuide.user.User;
@@ -34,15 +35,17 @@ public class TourGuideService {
     // Database connection will be used for external users, but for testing purposes internal users are provided and stored in memory
     private final Map<String, User> internalUserMap = new HashMap<>();
     boolean testMode = true;
-    //TODO: Move this to constructor
     private GpsUtilService gpsUtilService;
+    private RewardCentralService rewardCentralService;
 
     private Logger logger = LoggerFactory.getLogger(TourGuideService.class);
 
     @Autowired
-    public TourGuideService(RewardsService rewardsService, GpsUtilService gpsUtilService) {
+    public TourGuideService(RewardsService rewardsService, GpsUtilService gpsUtilService,
+                            RewardCentralService rewardCentralService) {
         this.gpsUtilService = gpsUtilService;
         this.rewardsService = rewardsService;
+        this.rewardCentralService = rewardCentralService;
 
         if (testMode) {
             logger.info("TestMode enabled");
@@ -103,6 +106,52 @@ public class TourGuideService {
         }
 
         return nearbyAttractions;
+    }
+
+    public List<NearbyAttractionDto> getUserNearbyAttractions(User user){
+        System.out.println("username ------"+ user.getUserName());
+        Location userLocation = user.getLastVisitedLocation().location;
+        List<NearbyAttractionDto> nearbyAttractionDtos = new ArrayList<>();
+        PriorityQueue<NearbyAttractionDto> priorityQueue = new PriorityQueue<>(5, new Comparator<NearbyAttractionDto>() {
+            @Override
+            public int compare(NearbyAttractionDto o1, NearbyAttractionDto o2) {
+                if (o1.getDistance() > o2.getDistance())
+                    return 1;
+                else if (o1.getDistance() < o2.getDistance())
+                    return -1;
+                return 0;
+            }
+        });
+        List<Attraction> attractionList = gpsUtilService.getAttractions();
+
+        for (int i = 0; i < attractionList.size(); i++) {
+            NearbyAttractionDto nearbyAttractionDto = new NearbyAttractionDto();
+            Attraction attraction = attractionList.get(i);
+            nearbyAttractionDto.setAttractionName(attraction.attractionName);
+            nearbyAttractionDto.setUserLocation(userLocation);
+            Location location = new Location(attraction.latitude, attraction.longitude);
+            nearbyAttractionDto.setAttractionLocation(location);
+            double distance = rewardsService.getDistance(nearbyAttractionDto.getUserLocation(), nearbyAttractionDto.getAttractionLocation());
+            nearbyAttractionDto.setDistance(distance);
+            int rewardsPoints = rewardCentralService.getAttractionRewardPoints(attraction.attractionId, user.getUserId());
+            nearbyAttractionDto.setRewardPoints(rewardsPoints);
+            priorityQueue.add(nearbyAttractionDto);
+        }
+        for (int i = 0; i < 5; i++) {
+            nearbyAttractionDtos.add(priorityQueue.poll());
+        }
+        return nearbyAttractionDtos;
+    }
+
+    public HashMap<String, Location> getAllUsersCurrentLocation(){
+        List<User> userList = getAllUsers();
+        HashMap<String, Location> locationList = new HashMap<>();
+        for (int i = 0; i < userList.size(); i++) {
+            String userId = userList.get(i).getUserId().toString();
+            Location location = userList.get(i).getLastVisitedLocation().location;
+            locationList.put(userId, location);
+        }
+        return locationList;
     }
 
     private void addShutDownHook() {
