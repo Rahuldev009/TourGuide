@@ -1,38 +1,32 @@
 package tourGuide;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.jsoniter.output.JsonStream;
-import gpsUtil.location.Attraction;
-import gpsUtil.location.Location;
-import gpsUtil.location.VisitedLocation;
+import org.javamoney.moneta.Money;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import tourGuide.dto.NearbyAttractionDto;
+import tourGuide.gpsUtil.Location;
+import tourGuide.gpsUtil.VisitedLocation;
 import tourGuide.service.GpsUtilService;
 import tourGuide.service.RewardCentralService;
 import tourGuide.service.RewardsService;
 import tourGuide.service.TourGuideService;
 import tourGuide.user.User;
+import tourGuide.user.UserPreferences;
 import tripPricer.Provider;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
 
 @RestController
 public class TourGuideController {
     private TourGuideService tourGuideService;
-    private RewardsService rewardsService;
-    private GpsUtilService gpsUtilService;
-    private RewardCentralService rewardCentralService;
 
     @Autowired
-    public TourGuideController(TourGuideService tourGuideService, RewardsService rewardsService,
-                               GpsUtilService gpsUtilService, RewardCentralService rewardCentralService) {
+    public TourGuideController(TourGuideService tourGuideService) {
         this.tourGuideService = tourGuideService;
-        this.rewardsService = rewardsService;
-        this.gpsUtilService = gpsUtilService;
-        this.rewardCentralService = rewardCentralService;
     }
 
     @RequestMapping("/")
@@ -56,38 +50,9 @@ public class TourGuideController {
     // The reward points for visiting each Attraction.
     //    Note: Attraction reward points can be gathered from RewardsCentral
     @RequestMapping("/getNearbyAttractions")
-    public String getNearbyAttractions(@RequestParam String userName){
-        User user = tourGuideService.getUser(userName);
-        Location userLocation = user.getLastVisitedLocation().location;
-        List<NearbyAttractionDto> nearbyAttractionDtos = new ArrayList<>();
-        PriorityQueue<NearbyAttractionDto> priorityQueue = new PriorityQueue<>(5, new Comparator<NearbyAttractionDto>() {
-            @Override
-            public int compare(NearbyAttractionDto o1, NearbyAttractionDto o2) {
-                if (o1.getDistance() > o2.getDistance())
-                    return 1;
-                else if (o1.getDistance() < o2.getDistance())
-                    return -1;
-                return 0;
-            }
-        });
-        List<Attraction> attractionList = gpsUtilService.getAttractions();
-
-        for (int i = 0; i < attractionList.size(); i++) {
-            NearbyAttractionDto nearbyAttractionDto = new NearbyAttractionDto();
-            Attraction attraction = attractionList.get(i);
-            nearbyAttractionDto.setAttractionName(attraction.attractionName);
-            nearbyAttractionDto.setUserLocation(userLocation);
-            Location location = new Location(attraction.latitude, attraction.longitude);
-            nearbyAttractionDto.setAttractionLocation(location);
-            double distance = rewardsService.getDistance(nearbyAttractionDto.getUserLocation(), nearbyAttractionDto.getAttractionLocation());
-            nearbyAttractionDto.setDistance(distance);
-            int rewardsPoints = rewardCentralService.getAttractionRewardPoints(attraction.attractionId, user.getUserId());
-            nearbyAttractionDto.setRewardPoints(rewardsPoints);
-            priorityQueue.add(nearbyAttractionDto);
-        }
-        for (int i = 0; i < 5; i++) {
-            nearbyAttractionDtos.add(priorityQueue.poll());
-        }
+    public String getNearbyAttractions(@RequestParam String userName) {
+        User user = getUser(userName);
+        List<NearbyAttractionDto> nearbyAttractionDtos = tourGuideService.getUserNearbyAttractions(user);
         return JsonStream.serialize(nearbyAttractionDtos);
     }
 
@@ -107,13 +72,7 @@ public class TourGuideController {
         //        "019b04a9-067a-4c76-8817-ee75088c3822": {"longitude":-48.188821,"latitude":74.84371}
         //        ...
         //     }
-        List<User> userList = tourGuideService.getAllUsers();
-        HashMap<String, Location> locationList = new HashMap();
-        for (int i = 0; i < userList.size(); i++) {
-            String userId = userList.get(i).getUserId().toString();
-            Location location = userList.get(i).getLastVisitedLocation().location;
-            locationList.put(userId, location);
-        }
+        HashMap<String, Location> locationList = tourGuideService.getAllUsersCurrentLocation();
         return JsonStream.serialize(locationList);
     }
 
@@ -121,6 +80,29 @@ public class TourGuideController {
     public String getTripDeals(@RequestParam String userName) {
         List<Provider> providers = tourGuideService.getTripDeals(getUser(userName));
         return JsonStream.serialize(providers);
+    }
+
+    @RequestMapping("/getUserPreference")
+    public String getUserPreference(@RequestParam String userName) {
+        User user = getUser(userName);
+        return JsonStream.serialize(user.getUserPreferences());
+    }
+
+    @RequestMapping("/setUserPreference")
+    public void setUserPreference(@RequestParam String userName, @RequestParam int attractionProximity, @RequestParam Money lowerPricePoint,
+                                  @RequestParam Money highPricePoint, @RequestParam int tripDuration,
+                                  @RequestParam int ticketQuantity, @RequestParam int numberOfAdults,
+                                  @RequestParam int numberOfChildren) {
+        User user = getUser(userName);
+        UserPreferences userPreferences = new UserPreferences();
+        userPreferences.setAttractionProximity(attractionProximity);
+        userPreferences.setLowerPricePoint(lowerPricePoint);
+        userPreferences.setHighPricePoint(highPricePoint);
+        userPreferences.setTripDuration(tripDuration);
+        userPreferences.setTicketQuantity(ticketQuantity);
+        userPreferences.setNumberOfAdults(numberOfAdults);
+        userPreferences.setNumberOfChildren(numberOfChildren);
+        user.setUserPreferences(userPreferences);
     }
 
     private User getUser(String userName) {

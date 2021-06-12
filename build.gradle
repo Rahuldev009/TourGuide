@@ -15,10 +15,18 @@ apply plugin: 'io.spring.dependency-management'
 apply plugin: "jacoco"
 
 
-bootJar {
-    baseName = 'tourGuide'
-    version =  '1.0.0'
-}
+//archivesBaseName = 'tourguide'
+//version = '1.0.0'
+
+//jar {
+//    baseName = 'tourGuide'
+//    archiveVersion =  '1.0.0'
+//}
+
+//tasks.withType(Test) {
+//    scanForTestClasses = false
+//    include "**/*Test.class" // whatever Ant pattern matches your test class files
+//}
 
 repositories {
     mavenCentral()
@@ -33,25 +41,24 @@ targetCompatibility = 1.8
 
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
-    compile("org.springframework.boot:spring-boot-starter-actuator")
-    compile group: 'org.javamoney', name: 'moneta', version: '1.3'
-	compile group: 'com.jsoniter', name: 'jsoniter', version: '0.9.23'
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
+    implementation group: 'org.javamoney', name: 'moneta', version: '1.3'
+    implementation group: 'com.jsoniter', name: 'jsoniter', version: '0.9.23'
     implementation group: 'org.springframework.boot', name: 'spring-boot-starter-webflux', version: '2.4.5'
     implementation group: 'com.google.code.gson', name: 'gson', version: '2.8.6'
+   // implementation 'org.apache.maven.plugins:maven-surefire-plugin:2.21.0'
 
-    compile(name:'gpsUtil', ext:'jar')
-    compile(name:'RewardCentral', ext:'jar')
-    compile(name:'TripPricer', ext:'jar')
-    
-    testCompile("junit:junit")
-    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.1.6.RELEASE'
+    implementation(name: 'TripPricer', ext: 'jar')
+    testImplementation("junit:junit")
+    testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.1.6.RELEASE'
 }
-
 
 jacoco {
-    toolVersion = "0.8.4"
+    toolVersion = "0.8.6"
 }
+
+
 
 jacocoTestReport {
     reports {

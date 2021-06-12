@@ -2,13 +2,13 @@ package tourGuide.service;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import gpsUtil.location.Attraction;
-import gpsUtil.location.VisitedLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.reactive.function.client.WebClient;
+import tourGuide.gpsUtil.Attraction;
+import tourGuide.gpsUtil.VisitedLocation;
 
 import java.util.List;
 import java.util.UUID;

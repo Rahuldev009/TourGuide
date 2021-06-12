@@ -1,6 +1,7 @@
 package tourGuide.dto;
 
-import gpsUtil.location.Location;
+
+import tourGuide.gpsUtil.Location;
 
 public class NearbyAttractionDto {
 

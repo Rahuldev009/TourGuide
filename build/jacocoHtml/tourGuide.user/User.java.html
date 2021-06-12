@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
-import gpsUtil.location.VisitedLocation;
+import tourGuide.gpsUtil.VisitedLocation;
 import tripPricer.Provider;
 
 public class User {
@@ -30,7 +30,7 @@ public class User {
 	}
 	
 	public String getUserName() {
-<span class="nc" id="L33">		return userName;</span>
+<span class="fc" id="L33">		return userName;</span>
 	}
 	
 	public void setPhoneNumber(String phoneNumber) {
@@ -71,10 +71,10 @@ public class User {
 <span class="nc" id="L71">	}</span>
 	
 	public void addUserReward(UserReward userReward) {
-<span class="nc bnc" id="L74" title="All 4 branches missed.">		if(userRewards.stream().filter(r -&gt; !r.attraction.attractionName.equals(userReward.attraction)).count() == 0) {</span>
-<span class="nc" id="L75">			userRewards.add(userReward);</span>
+<span class="pc bpc" id="L74" title="1 of 4 branches missed.">		if(userRewards.stream().filter(r -&gt; !r.attraction.attractionName.equals(userReward.attraction)).count() == 0) {</span>
+<span class="fc" id="L75">			userRewards.add(userReward);</span>
 		}
-<span class="nc" id="L77">	}</span>
+<span class="fc" id="L77">	}</span>
 	
 	public List&lt;UserReward&gt; getUserRewards() {
 <span class="fc" id="L80">		return userRewards;</span>
@@ -89,7 +89,7 @@ public class User {
 <span class="nc" id="L89">	}</span>
 
 	public VisitedLocation getLastVisitedLocation() {
-<span class="nc" id="L92">		return visitedLocations.get(visitedLocations.size() - 1);</span>
+<span class="fc" id="L92">		return visitedLocations.get(visitedLocations.size() - 1);</span>
 	}
 	
 	public void setTripDeals(List&lt;Provider&gt; tripDeals) {
@@ -101,4 +101,4 @@ public class User {
 	}
 
 }
-</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>
