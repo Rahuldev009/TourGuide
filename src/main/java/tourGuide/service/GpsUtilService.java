@@ -17,10 +17,7 @@ import java.util.UUID;
 public class GpsUtilService {
     private Logger logger = LoggerFactory.getLogger(GpsUtilService.class);
 
-    //TODO: Difference b/w static and non static methods - When to use which
-    //TODO: Dependency injection - Working
-    public List<Attraction> getAttractions(){
-        //TODO: Write loggers for printing the time taken for this API call
+    public List<Attraction> getAttractions() {
         WebClient.Builder webClientBuilder = WebClient.builder();
         String jsonResponseFromGetAttraction = webClientBuilder.build()
                 .get()
@@ -31,16 +28,16 @@ public class GpsUtilService {
 
         Gson gson = new Gson();
         List<Attraction> attractionList = gson.fromJson(jsonResponseFromGetAttraction,
-                new TypeToken<List<Attraction>>(){}.getType());
+                new TypeToken<List<Attraction>>() {
+                }.getType());
         return attractionList;
     }
 
-    //TODO: Remove RequestParam annotation & use "attribute" method of webClientBuilder
     public VisitedLocation getUserLocation(@RequestParam UUID userId) {
         WebClient.Builder webClientBuilder = WebClient.builder();
         String JsonResponseFrom = webClientBuilder.build()
                 .get()
-                .uri("http://localhost:8081/getUserLocation?userId="+userId)
+                .uri("http://localhost:8081/getUserLocation?userId=" + userId)
                 .retrieve()
                 .bodyToMono(String.class)
                 .block();

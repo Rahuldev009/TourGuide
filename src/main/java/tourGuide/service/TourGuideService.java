@@ -108,8 +108,8 @@ public class TourGuideService {
         return nearbyAttractions;
     }
 
-    public List<NearbyAttractionDto> getUserNearbyAttractions(User user){
-        System.out.println("username ------"+ user.getUserName());
+    public List<NearbyAttractionDto> getUserNearbyAttractions(User user) {
+        System.out.println("username ------" + user.getUserName());
         Location userLocation = user.getLastVisitedLocation().location;
         List<NearbyAttractionDto> nearbyAttractionDtos = new ArrayList<>();
         PriorityQueue<NearbyAttractionDto> priorityQueue = new PriorityQueue<>(5, new Comparator<NearbyAttractionDto>() {
@@ -143,7 +143,7 @@ public class TourGuideService {
         return nearbyAttractionDtos;
     }
 
-    public HashMap<String, Location> getAllUsersCurrentLocation(){
+    public HashMap<String, Location> getAllUsersCurrentLocation() {
         List<User> userList = getAllUsers();
         HashMap<String, Location> locationList = new HashMap<>();
         for (int i = 0; i < userList.size(); i++) {

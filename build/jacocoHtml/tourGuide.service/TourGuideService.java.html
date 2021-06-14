@@ -69,7 +69,7 @@ public class TourGuideService {
     }
 
     public User getUser(String userName) {
-<span class="fc" id="L72">        return internalUserMap.get(userName);</span>
+<span class="nc" id="L72">        return internalUserMap.get(userName);</span>
     }
 
     public List&lt;User&gt; getAllUsers() {
@@ -77,17 +77,17 @@ public class TourGuideService {
     }
 
     public void addUser(User user) {
-<span class="pc bpc" id="L80" title="1 of 2 branches missed.">        if (!internalUserMap.containsKey(user.getUserName())) {</span>
-<span class="fc" id="L81">            internalUserMap.put(user.getUserName(), user);</span>
+<span class="nc bnc" id="L80" title="All 2 branches missed.">        if (!internalUserMap.containsKey(user.getUserName())) {</span>
+<span class="nc" id="L81">            internalUserMap.put(user.getUserName(), user);</span>
         }
-<span class="fc" id="L83">    }</span>
+<span class="nc" id="L83">    }</span>
 
     public List&lt;Provider&gt; getTripDeals(User user) {
-<span class="pc" id="L86">        int cumulatativeRewardPoints = user.getUserRewards().stream().mapToInt(i -&gt; i.getRewardPoints()).sum();</span>
-<span class="fc" id="L87">        List&lt;Provider&gt; providers = tripPricer.getPrice(tripPricerApiKey, user.getUserId(), user.getUserPreferences().getNumberOfAdults(),</span>
-<span class="fc" id="L88">                user.getUserPreferences().getNumberOfChildren(), user.getUserPreferences().getTripDuration(), cumulatativeRewardPoints);</span>
-<span class="fc" id="L89">        user.setTripDeals(providers);</span>
-<span class="fc" id="L90">        return providers;</span>
+<span class="nc" id="L86">        int cumulatativeRewardPoints = user.getUserRewards().stream().mapToInt(i -&gt; i.getRewardPoints()).sum();</span>
+<span class="nc" id="L87">        List&lt;Provider&gt; providers = tripPricer.getPrice(tripPricerApiKey, user.getUserId(), user.getUserPreferences().getNumberOfAdults(),</span>
+<span class="nc" id="L88">                user.getUserPreferences().getNumberOfChildren(), user.getUserPreferences().getTripDuration(), cumulatativeRewardPoints);</span>
+<span class="nc" id="L89">        user.setTripDeals(providers);</span>
+<span class="nc" id="L90">        return providers;</span>
     }
 
     public VisitedLocation trackUserLocation(User user) {
@@ -98,60 +98,60 @@ public class TourGuideService {
     }
 
     public List&lt;Attraction&gt; getNearByAttractions(VisitedLocation visitedLocation) {
-<span class="fc" id="L101">        List&lt;Attraction&gt; nearbyAttractions = new ArrayList&lt;&gt;();</span>
-<span class="fc bfc" id="L102" title="All 2 branches covered.">        for (Attraction attraction : gpsUtilService.getAttractions()) {</span>
-<span class="fc bfc" id="L103" title="All 2 branches covered.">            if (rewardsService.isWithinAttractionProximity(attraction, visitedLocation.location)) {</span>
-<span class="fc" id="L104">                nearbyAttractions.add(attraction);</span>
+<span class="nc" id="L101">        List&lt;Attraction&gt; nearbyAttractions = new ArrayList&lt;&gt;();</span>
+<span class="nc bnc" id="L102" title="All 2 branches missed.">        for (Attraction attraction : gpsUtilService.getAttractions()) {</span>
+<span class="nc bnc" id="L103" title="All 2 branches missed.">            if (rewardsService.isWithinAttractionProximity(attraction, visitedLocation.location)) {</span>
+<span class="nc" id="L104">                nearbyAttractions.add(attraction);</span>
             }
-<span class="fc" id="L106">        }</span>
+<span class="nc" id="L106">        }</span>
 
-<span class="fc" id="L108">        return nearbyAttractions;</span>
+<span class="nc" id="L108">        return nearbyAttractions;</span>
     }
 
     public List&lt;NearbyAttractionDto&gt; getUserNearbyAttractions(User user){
-<span class="fc" id="L112">        System.out.println(&quot;username ------&quot;+ user.getUserName());</span>
-<span class="fc" id="L113">        Location userLocation = user.getLastVisitedLocation().location;</span>
-<span class="fc" id="L114">        List&lt;NearbyAttractionDto&gt; nearbyAttractionDtos = new ArrayList&lt;&gt;();</span>
-<span class="fc" id="L115">        PriorityQueue&lt;NearbyAttractionDto&gt; priorityQueue = new PriorityQueue&lt;&gt;(5, new Comparator&lt;NearbyAttractionDto&gt;() {</span>
+<span class="nc" id="L112">        System.out.println(&quot;username ------&quot;+ user.getUserName());</span>
+<span class="nc" id="L113">        Location userLocation = user.getLastVisitedLocation().location;</span>
+<span class="nc" id="L114">        List&lt;NearbyAttractionDto&gt; nearbyAttractionDtos = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L115">        PriorityQueue&lt;NearbyAttractionDto&gt; priorityQueue = new PriorityQueue&lt;&gt;(5, new Comparator&lt;NearbyAttractionDto&gt;() {</span>
             @Override
             public int compare(NearbyAttractionDto o1, NearbyAttractionDto o2) {
-<span class="fc bfc" id="L118" title="All 2 branches covered.">                if (o1.getDistance() &gt; o2.getDistance())</span>
-<span class="fc" id="L119">                    return 1;</span>
-<span class="pc bpc" id="L120" title="1 of 2 branches missed.">                else if (o1.getDistance() &lt; o2.getDistance())</span>
-<span class="fc" id="L121">                    return -1;</span>
+<span class="nc bnc" id="L118" title="All 2 branches missed.">                if (o1.getDistance() &gt; o2.getDistance())</span>
+<span class="nc" id="L119">                    return 1;</span>
+<span class="nc bnc" id="L120" title="All 2 branches missed.">                else if (o1.getDistance() &lt; o2.getDistance())</span>
+<span class="nc" id="L121">                    return -1;</span>
 <span class="nc" id="L122">                return 0;</span>
             }
         });
-<span class="fc" id="L125">        List&lt;Attraction&gt; attractionList = gpsUtilService.getAttractions();</span>
+<span class="nc" id="L125">        List&lt;Attraction&gt; attractionList = gpsUtilService.getAttractions();</span>
 
-<span class="fc bfc" id="L127" title="All 2 branches covered.">        for (int i = 0; i &lt; attractionList.size(); i++) {</span>
-<span class="fc" id="L128">            NearbyAttractionDto nearbyAttractionDto = new NearbyAttractionDto();</span>
-<span class="fc" id="L129">            Attraction attraction = attractionList.get(i);</span>
-<span class="fc" id="L130">            nearbyAttractionDto.setAttractionName(attraction.attractionName);</span>
-<span class="fc" id="L131">            nearbyAttractionDto.setUserLocation(userLocation);</span>
-<span class="fc" id="L132">            Location location = new Location(attraction.latitude, attraction.longitude);</span>
-<span class="fc" id="L133">            nearbyAttractionDto.setAttractionLocation(location);</span>
-<span class="fc" id="L134">            double distance = rewardsService.getDistance(nearbyAttractionDto.getUserLocation(), nearbyAttractionDto.getAttractionLocation());</span>
-<span class="fc" id="L135">            nearbyAttractionDto.setDistance(distance);</span>
-<span class="fc" id="L136">            int rewardsPoints = rewardCentralService.getAttractionRewardPoints(attraction.attractionId, user.getUserId());</span>
-<span class="fc" id="L137">            nearbyAttractionDto.setRewardPoints(rewardsPoints);</span>
-<span class="fc" id="L138">            priorityQueue.add(nearbyAttractionDto);</span>
+<span class="nc bnc" id="L127" title="All 2 branches missed.">        for (int i = 0; i &lt; attractionList.size(); i++) {</span>
+<span class="nc" id="L128">            NearbyAttractionDto nearbyAttractionDto = new NearbyAttractionDto();</span>
+<span class="nc" id="L129">            Attraction attraction = attractionList.get(i);</span>
+<span class="nc" id="L130">            nearbyAttractionDto.setAttractionName(attraction.attractionName);</span>
+<span class="nc" id="L131">            nearbyAttractionDto.setUserLocation(userLocation);</span>
+<span class="nc" id="L132">            Location location = new Location(attraction.latitude, attraction.longitude);</span>
+<span class="nc" id="L133">            nearbyAttractionDto.setAttractionLocation(location);</span>
+<span class="nc" id="L134">            double distance = rewardsService.getDistance(nearbyAttractionDto.getUserLocation(), nearbyAttractionDto.getAttractionLocation());</span>
+<span class="nc" id="L135">            nearbyAttractionDto.setDistance(distance);</span>
+<span class="nc" id="L136">            int rewardsPoints = rewardCentralService.getAttractionRewardPoints(attraction.attractionId, user.getUserId());</span>
+<span class="nc" id="L137">            nearbyAttractionDto.setRewardPoints(rewardsPoints);</span>
+<span class="nc" id="L138">            priorityQueue.add(nearbyAttractionDto);</span>
         }
-<span class="fc bfc" id="L140" title="All 2 branches covered.">        for (int i = 0; i &lt; 5; i++) {</span>
-<span class="fc" id="L141">            nearbyAttractionDtos.add(priorityQueue.poll());</span>
+<span class="nc bnc" id="L140" title="All 2 branches missed.">        for (int i = 0; i &lt; 5; i++) {</span>
+<span class="nc" id="L141">            nearbyAttractionDtos.add(priorityQueue.poll());</span>
         }
-<span class="fc" id="L143">        return nearbyAttractionDtos;</span>
+<span class="nc" id="L143">        return nearbyAttractionDtos;</span>
     }
 
     public HashMap&lt;String, Location&gt; getAllUsersCurrentLocation(){
-<span class="fc" id="L147">        List&lt;User&gt; userList = getAllUsers();</span>
-<span class="fc" id="L148">        HashMap&lt;String, Location&gt; locationList = new HashMap&lt;&gt;();</span>
-<span class="pc bpc" id="L149" title="1 of 2 branches missed.">        for (int i = 0; i &lt; userList.size(); i++) {</span>
+<span class="nc" id="L147">        List&lt;User&gt; userList = getAllUsers();</span>
+<span class="nc" id="L148">        HashMap&lt;String, Location&gt; locationList = new HashMap&lt;&gt;();</span>
+<span class="nc bnc" id="L149" title="All 2 branches missed.">        for (int i = 0; i &lt; userList.size(); i++) {</span>
 <span class="nc" id="L150">            String userId = userList.get(i).getUserId().toString();</span>
 <span class="nc" id="L151">            Location location = userList.get(i).getLastVisitedLocation().location;</span>
 <span class="nc" id="L152">            locationList.put(userId, location);</span>
         }
-<span class="fc" id="L154">        return locationList;</span>
+<span class="nc" id="L154">        return locationList;</span>
     }
 
     private void addShutDownHook() {

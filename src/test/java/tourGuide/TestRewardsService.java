@@ -29,16 +29,11 @@ public class TestRewardsService {
 
 
     private Logger logger = LoggerFactory.getLogger(TestRewardsService.class);
+
     @Test
     public void userGetRewards() {
-
-//        GpsUtilService gpsUtilService = new GpsUtilService();
-//        RewardCentralService rewardCentralService = new RewardCentralService();
-//        RewardsService rewardsService = new RewardsService(gpsUtilService, rewardCentralService);
-
         InternalTestHelper.setInternalUserNumber(0);
-        TourGuideService tourGuideService = new TourGuideService(rewardsService, gpsUtilService,rewardCentralService);
-
+        TourGuideService tourGuideService = new TourGuideService(rewardsService, gpsUtilService, rewardCentralService);
         User user = new User(UUID.randomUUID(), "jon", "000", "jon@tourGuide.com");
         Attraction attraction = gpsUtilService.getAttractions().get(0);
         user.addToVisitedLocations(new VisitedLocation(user.getUserId(), attraction, new Date()));
@@ -50,9 +45,6 @@ public class TestRewardsService {
 
     @Test
     public void isWithinAttractionProximity() {
-//        GpsUtilService gpsUtilService = new GpsUtilService();
-//        RewardCentralService rewardCentralService = new RewardCentralService();
-//         RewardsService rewardsService = new RewardsService(gpsUtilService, rewardCentralService);
         Attraction attraction = gpsUtilService.getAttractions().get(0);
         assertTrue(rewardsService.isWithinAttractionProximity(attraction, attraction));
     }
@@ -60,19 +52,14 @@ public class TestRewardsService {
     @Ignore // Needs fixed - can throw ConcurrentModificationException
     @Test
     public void nearAllAttractions() {
-//        GpsUtilService gpsUtilService = new GpsUtilService();
-//        RewardCentralService rewardCentralService = new RewardCentralService();
-//        RewardsService rewardsService = new RewardsService(gpsUtilService, rewardCentralService);
         rewardsService.setProximityBuffer(Integer.MAX_VALUE);
-
         InternalTestHelper.setInternalUserNumber(1);
-        TourGuideService tourGuideService = new TourGuideService(rewardsService, gpsUtilService,rewardCentralService);
-
+        TourGuideService tourGuideService = new TourGuideService(rewardsService, gpsUtilService, rewardCentralService);
         rewardsService.calculateRewards(tourGuideService.getAllUsers().get(0));
         List<UserReward> userRewards = tourGuideService.getUserRewards(tourGuideService.getAllUsers().get(0));
         tourGuideService.tracker.stopTracking();
-
         assertEquals(gpsUtilService.getAttractions().size(), userRewards.size());
     }
+
 
 }
