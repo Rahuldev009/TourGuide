@@ -13,7 +13,6 @@ public class RewardCentralService {
 
     public int getAttractionRewardPoints(UUID attractionId, UUID userId){
         WebClient.Builder webClientBuilder = WebClient.builder();
-        //TODO: 1. Write loggers to print response times 2. Use url parameters option instead of appending to the URL
         String JsonResponseFrom =webClientBuilder.build()
                 .get()
                 .uri("http://localhost:8082/getAttractionRewardPoints?attractionId="+attractionId+"&userId="+userId)
@@ -21,6 +20,6 @@ public class RewardCentralService {
                 .bodyToMono(String.class)
                 .block();
         return Integer.parseInt(JsonResponseFrom);
-
     }
+
 }
