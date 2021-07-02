@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class tourGuide.TestTourGuideService</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class tourGuide.TestTourGuideService</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/tourGuide.html">tourGuide</a> &gt; TestTourGuideService</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">8</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">12.167s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">addUser</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getAllUsers</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getAllUsersCurrentLocation</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getNearbyAttractions</td>
+<td class="success">0.019s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getTripDeals</td>
+<td class="success">0.047s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getUserLocation</td>
+<td class="success">1.447s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getUserNearbyAttractions</td>
+<td class="success">10.527s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">trackUser</td>
+<td class="success">0.126s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>20:28:49.974 [Test worker] INFO tourGuide.service.TourGuideService - TestMode enabled
+20:28:49.980 [Test worker] DEBUG tourGuide.service.TourGuideService - Initializing users
+20:28:50.048 [Test worker] DEBUG tourGuide.service.TourGuideService - Created 100 internal test users.
+20:28:50.048 [Test worker] DEBUG tourGuide.service.TourGuideService - Finished initializing users
+20:28:50.054 [pool-1-thread-1] DEBUG tourGuide.tracker.Tracker - Begin Tracker. Tracking 100 users.
+20:28:50.675 [pool-1-thread-1] DEBUG io.netty.util.internal.logging.InternalLoggerFactory - Using SLF4J as the default logging framework
+20:28:50.698 [pool-1-thread-1] DEBUG io.netty.util.internal.PlatformDependent - Platform: MacOS
+20:28:50.702 [pool-1-thread-1] DEBUG io.netty.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+20:28:50.702 [pool-1-thread-1] DEBUG io.netty.util.internal.PlatformDependent0 - Java version: 16
+20:28:50.703 [pool-1-thread-1] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+20:28:50.704 [pool-1-thread-1] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+20:28:50.705 [pool-1-thread-1] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+20:28:50.708 [pool-1-thread-1] DEBUG io.netty.util.internal.PlatformDependent0 - direct buffer constructor: unavailable
+java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
+	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31)
+	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:224)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:312)
+	at io.netty.util.internal.PlatformDependent0.&lt;clinit&gt;(PlatformDependent0.java:218)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:214)
+	at io.netty.util.internal.PlatformDependent.&lt;clinit&gt;(PlatformDependent.java:82)
+	at io.netty.util.ConstantPool.&lt;init&gt;(ConstantPool.java:32)
+	at io.netty.channel.ChannelOption$1.&lt;init&gt;(ChannelOption.java:35)
+	at io.netty.channel.ChannelOption.&lt;clinit&gt;(ChannelOption.java:35)
+	at reactor.netty.tcp.TcpClient.&lt;clinit&gt;(TcpClient.java:599)
+	at reactor.netty.http.client.HttpClient.&lt;clinit&gt;(HttpClient.java:932)
+	at org.springframework.http.client.reactive.ReactorClientHttpConnector.&lt;init&gt;(ReactorClientHttpConnector.java:57)
+	at org.springframework.web.reactive.function.client.DefaultWebClientBuilder.initExchangeFunction(DefaultWebClientBuilder.java:226)
+	at org.springframework.web.reactive.function.client.DefaultWebClientBuilder.build(DefaultWebClientBuilder.java:207)
+	at tourGuide.service.GpsUtilService.getUserLocation(GpsUtilService.java:47)
+	at tourGuide.service.TourGuideService.trackUserLocation(TourGuideService.java:127)
+	at tourGuide.tracker.Tracker.lambda$run$0(Tracker.java:47)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at tourGuide.tracker.Tracker.run(Tracker.java:47)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+20:28:50.710 [pool-1-thread-1] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+20:28:50.711 [pool-1-thread-1] DEBUG io.netty.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @1a93a7ca
+	at java.base/jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:385)
+	at java.base/java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:687)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:559)
+	at io.netty.util.internal.PlatformDependent0$6.run(PlatformDependent0.java:334)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:312)
+	at io.netty.util.internal.PlatformDependent0.&lt;clinit&gt;(PlatformDependent0.java:325)
+	at io.netty.util.internal.PlatformDependent.isAndroid(PlatformDependent.java:214)
+	at io.netty.util.internal.PlatformDependent.&lt;clinit&gt;(PlatformDependent.java:82)
+	at io.netty.util.ConstantPool.&lt;init&gt;(ConstantPool.java:32)
+	at io.netty.channel.ChannelOption$1.&lt;init&gt;(ChannelOption.java:35)
+	at io.netty.channel.ChannelOption.&lt;clinit&gt;(ChannelOption.java:35)
+	at reactor.netty.tcp.TcpClient.&lt;clinit&gt;(TcpClient.java:599)
+	at reactor.netty.http.client.HttpClient.&lt;clinit&gt;(HttpClient.java:932)
+	at org.springframework.http.client.reactive.ReactorClientHttpConnector.&lt;init&gt;(ReactorClientHttpConnector.java:57)
+	at org.springframework.web.reactive.function.client.DefaultWebClientBuilder.initExchangeFunction(DefaultWebClientBuilder.java:226)
+	at org.springframework.web.reactive.function.client.DefaultWebClientBuilder.build(DefaultWebClientBuilder.java:207)
+	at tourGuide.service.GpsUtilService.getUserLocation(GpsUtilService.java:47)
+	at tourGuide.service.TourGuideService.trackUserLocation(TourGuideService.java:127)
+	at tourGuide.tracker.Tracker.lambda$run$0(Tracker.java:47)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at tourGuide.tracker.Tracker.run(Tracker.java:47)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+20:28:50.713 [pool-1-thread-1] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.&lt;init&gt;(long, int): unavailable
+20:28:50.713 [pool-1-thread-1] DEBUG io.netty.util.internal.PlatformDependent - sun.misc.Unsafe: available
+20:28:50.729 [pool-1-thread-1] DEBUG io.netty.util.internal.PlatformDependent - maxDirectMemory: 536870912 bytes (maybe)
+20:28:50.729 [pool-1-thread-1] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.tmpdir: /var/folders/0x/6h10gfx92f5gvdssnp1j5m000000gn/T (java.io.tmpdir)
+20:28:50.729 [pool-1-thread-1] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+20:28:50.730 [pool-1-thread-1] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+20:28:50.731 [pool-1-thread-1] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+20:28:50.732 [pool-1-thread-1] DEBUG io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+20:28:50.732 [pool-1-thread-1] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+20:28:50.736 [pool-1-thread-1] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
+20:28:50.736 [pool-1-thread-1] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
+20:28:50.743 [pool-1-thread-1] DEBUG io.netty.util.NetUtil - Loopback interface: lo0 (lo0, 0:0:0:0:0:0:0:1%lo0)
+20:28:50.744 [pool-1-thread-1] DEBUG io.netty.util.NetUtil - Failed to get SOMAXCONN from sysctl and file /proc/sys/net/core/somaxconn. Default: 128
+20:28:50.751 [pool-1-thread-1] DEBUG reactor.util.Loggers$LoggerFactory - Using Slf4j logging framework
+20:28:50.784 [pool-1-thread-1] DEBUG reactor.netty.tcp.TcpResources - [http] resources will use the default LoopResources: DefaultLoopResources {prefix=reactor-http, daemon=true, selectCount=8, workerCount=8}
+20:28:50.784 [pool-1-thread-1] DEBUG reactor.netty.tcp.TcpResources - [http] resources will use the default ConnectionProvider: PooledConnectionProvider {name=http, poolFactory=reactor.netty.resources.ConnectionProvider$$Lambda$167/0x0000000800da8000@7b3d719d}
+20:28:50.913 [pool-1-thread-1] DEBUG reactor.netty.resources.DefaultLoopEpoll - Default Epoll support : false
+20:28:50.913 [pool-1-thread-1] DEBUG reactor.netty.resources.DefaultLoopKQueue - Default KQueue support : false
+20:28:50.918 [pool-1-thread-1] DEBUG io.netty.channel.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 16
+20:28:50.936 [pool-1-thread-1] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+20:28:50.936 [pool-1-thread-1] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+20:28:50.945 [pool-1-thread-1] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+20:28:50.945 [pool-1-thread-1] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+20:28:50.955 [Test worker] DEBUG io.netty.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+20:28:51.067 [pool-1-thread-1] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [5b5074f2] HTTP GET http://localhost:8081/getUserLocation?userId=43d1ce77-73a3-4457-acf4-45b03a09b171
+20:28:51.067 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [7f7d0ecf] HTTP GET http://localhost:8081/getUserLocation?userId=9b02cb0c-28fd-4ca2-b0b5-83f2a4814387
+20:28:51.082 [pool-1-thread-1] DEBUG reactor.netty.resources.PooledConnectionProvider - Creating new client pool [http] for localhost/&lt;unresolved&gt;:8081
+20:28:51.092 [Test worker] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.processId: 1196 (auto-detected)
+20:28:51.096 [Test worker] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.machineId: a4:83:e7:ff:fe:6c:eb:61 (auto-detected)
+20:28:51.111 [Test worker] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+20:28:51.111 [Test worker] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+20:28:51.154 [pool-1-thread-1] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 5
+20:28:51.154 [pool-1-thread-1] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 5
+20:28:51.154 [pool-1-thread-1] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+20:28:51.154 [pool-1-thread-1] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 11
+20:28:51.154 [pool-1-thread-1] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 16777216
+20:28:51.155 [pool-1-thread-1] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.tinyCacheSize: 512
+20:28:51.155 [pool-1-thread-1] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+20:28:51.155 [pool-1-thread-1] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+20:28:51.155 [pool-1-thread-1] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+20:28:51.155 [pool-1-thread-1] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+20:28:51.155 [pool-1-thread-1] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+20:28:51.155 [pool-1-thread-1] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: true
+20:28:51.155 [pool-1-thread-1] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+20:28:51.166 [pool-1-thread-1] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
+20:28:51.166 [pool-1-thread-1] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+20:28:51.166 [pool-1-thread-1] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+20:28:51.181 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00] Created new pooled channel, now 0 active connections and 2 inactive connections
+20:28:51.181 [reactor-http-nio-16] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0xf50d03c3] Created new pooled channel, now 0 active connections and 2 inactive connections
+20:28:51.224 [reactor-http-nio-16] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
+20:28:51.224 [reactor-http-nio-16] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
+20:28:51.228 [reactor-http-nio-16] DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@640a1712
+20:28:51.238 [reactor-http-nio-16] DEBUG reactor.netty.channel.BootstrapHandlers - [id: 0xf50d03c3] Initialized pipeline DefaultChannelPipeline{(BootstrapHandlers$BootstrapInitializerHandler#0 = reactor.netty.channel.BootstrapHandlers$BootstrapInitializerHandler), (SimpleChannelPool$1#0 = io.netty.channel.pool.SimpleChannelPool$1), (reactor.left.httpCodec = io.netty.handler.codec.http.HttpClientCodec), (reactor.left.decompressor = io.netty.handler.codec.http.HttpContentDecompressor), (reactor.right.reactiveBridge = reactor.netty.channel.ChannelOperationsHandler)}
+20:28:51.238 [reactor-http-nio-15] DEBUG reactor.netty.channel.BootstrapHandlers - [id: 0x05482a00] Initialized pipeline DefaultChannelPipeline{(BootstrapHandlers$BootstrapInitializerHandler#0 = reactor.netty.channel.BootstrapHandlers$BootstrapInitializerHandler), (SimpleChannelPool$1#0 = io.netty.channel.pool.SimpleChannelPool$1), (reactor.left.httpCodec = io.netty.handler.codec.http.HttpClientCodec), (reactor.left.decompressor = io.netty.handler.codec.http.HttpContentDecompressor), (reactor.right.reactiveBridge = reactor.netty.channel.ChannelOperationsHandler)}
+20:28:51.248 [reactor-http-nio-16] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] onStateChange(PooledConnection{channel=[id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081]}, [connected])
+20:28:51.248 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] onStateChange(PooledConnection{channel=[id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081]}, [connected])
+20:28:51.260 [reactor-http-nio-16] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/, connection=PooledConnection{channel=[id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081]}}, [configured])
+20:28:51.260 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/, connection=PooledConnection{channel=[id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081]}}, [configured])
+20:28:51.263 [reactor-http-nio-16] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] Registering pool release on close event for channel
+20:28:51.263 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Registering pool release on close event for channel
+20:28:51.265 [reactor-http-nio-16] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] Handler is being applied: {uri=http://localhost:8081/getUserLocation?userId=9b02cb0c-28fd-4ca2-b0b5-83f2a4814387, method=GET}
+20:28:51.265 [reactor-http-nio-15] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Handler is being applied: {uri=http://localhost:8081/getUserLocation?userId=43d1ce77-73a3-4457-acf4-45b03a09b171, method=GET}
+20:28:51.285 [reactor-http-nio-16] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
+20:28:51.285 [reactor-http-nio-16] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+20:28:51.286 [reactor-http-nio-16] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.linkCapacity: 16
+20:28:51.286 [reactor-http-nio-16] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
+20:28:51.327 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getUserLocation?userId=43d1ce77-73a3-4457-acf4-45b03a09b171, connection=PooledConnection{channel=[id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081]}}, [request_sent])
+20:28:51.327 [reactor-http-nio-16] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getUserLocation?userId=9b02cb0c-28fd-4ca2-b0b5-83f2a4814387, connection=PooledConnection{channel=[id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081]}}, [request_sent])
+20:28:51.327 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Channel connected, now 2 active connections and 0 inactive connections
+20:28:51.327 [reactor-http-nio-16] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] Channel connected, now 2 active connections and 0 inactive connections
+20:28:51.383 [reactor-http-nio-16] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:51 GMT]
+20:28:51.383 [reactor-http-nio-16] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getUserLocation?userId=9b02cb0c-28fd-4ca2-b0b5-83f2a4814387, connection=PooledConnection{channel=[id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081]}}, [response_received])
+20:28:51.387 [reactor-http-nio-16] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [7f7d0ecf] Response 200 OK
+20:28:51.407 [reactor-http-nio-16] DEBUG reactor.netty.channel.FluxReceive - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:51.413 [reactor-http-nio-16] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] Received last HTTP packet
+20:28:51.414 [reactor-http-nio-16] DEBUG org.springframework.core.codec.StringDecoder - [7f7d0ecf] Decoded &quot;{&quot;userId&quot;:&quot;9b02cb0c-28fd-4ca2-b0b5-83f2a4814387&quot;,&quot;location&quot;:{&quot;longitude&quot;:-43.025482,&quot;latitude&quot;:48.2 (truncated)...
+20:28:51.414 [reactor-http-nio-16] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getUserLocation?userId=9b02cb0c-28fd-4ca2-b0b5-83f2a4814387, connection=PooledConnection{channel=[id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081]}}, [disconnecting])
+20:28:51.414 [reactor-http-nio-16] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] Releasing channel
+20:28:51.414 [reactor-http-nio-16] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] Channel cleaned, now 1 active connections and 1 inactive connections
+20:28:51.422 [reactor-http-nio-15] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:51 GMT]
+20:28:51.422 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getUserLocation?userId=43d1ce77-73a3-4457-acf4-45b03a09b171, connection=PooledConnection{channel=[id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081]}}, [response_received])
+20:28:51.422 [reactor-http-nio-15] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [5b5074f2] Response 200 OK
+20:28:51.423 [reactor-http-nio-15] DEBUG reactor.netty.channel.FluxReceive - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:51.423 [reactor-http-nio-15] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Received last HTTP packet
+20:28:51.423 [reactor-http-nio-15] DEBUG org.springframework.core.codec.StringDecoder - [5b5074f2] Decoded &quot;{&quot;userId&quot;:&quot;43d1ce77-73a3-4457-acf4-45b03a09b171&quot;,&quot;location&quot;:{&quot;longitude&quot;:-43.581757,&quot;latitude&quot;:2.16 (truncated)...
+20:28:51.424 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getUserLocation?userId=43d1ce77-73a3-4457-acf4-45b03a09b171, connection=PooledConnection{channel=[id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081]}}, [disconnecting])
+20:28:51.424 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Releasing channel
+20:28:51.424 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Channel cleaned, now 0 active connections and 2 inactive connections
+20:28:51.472 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [472c9b8b] HTTP GET http://localhost:8081/getAttractions
+20:28:51.472 [pool-1-thread-1] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [48b51c57] HTTP GET http://localhost:8081/getAttractions
+20:28:51.473 [reactor-http-nio-16] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] Channel acquired, now 2 active connections and 0 inactive connections
+20:28:51.473 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Channel acquired, now 2 active connections and 0 inactive connections
+20:28:51.473 [reactor-http-nio-16] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] Handler is being applied: {uri=http://localhost:8081/getAttractions, method=GET}
+20:28:51.473 [reactor-http-nio-15] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Handler is being applied: {uri=http://localhost:8081/getAttractions, method=GET}
+20:28:51.474 [reactor-http-nio-16] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getAttractions, connection=PooledConnection{channel=[id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081]}}, [request_sent])
+20:28:51.474 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getAttractions, connection=PooledConnection{channel=[id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081]}}, [request_sent])
+20:28:51.487 [reactor-http-nio-16] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:51 GMT]
+20:28:51.487 [reactor-http-nio-16] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getAttractions, connection=PooledConnection{channel=[id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081]}}, [response_received])
+20:28:51.488 [reactor-http-nio-15] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:51 GMT]
+20:28:51.488 [reactor-http-nio-16] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [472c9b8b] Response 200 OK
+20:28:51.488 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getAttractions, connection=PooledConnection{channel=[id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081]}}, [response_received])
+20:28:51.488 [reactor-http-nio-15] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [48b51c57] Response 200 OK
+20:28:51.488 [reactor-http-nio-16] DEBUG reactor.netty.channel.FluxReceive - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:51.488 [reactor-http-nio-15] DEBUG reactor.netty.channel.FluxReceive - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:51.489 [reactor-http-nio-16] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] Received last HTTP packet
+20:28:51.489 [reactor-http-nio-15] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Received last HTTP packet
+20:28:51.493 [reactor-http-nio-16] DEBUG org.springframework.core.codec.StringDecoder - [472c9b8b] Decoded &quot;[{&quot;longitude&quot;:-117.922008,&quot;latitude&quot;:33.817595,&quot;attractionName&quot;:&quot;Disneyland&quot;,&quot;city&quot;:&quot;Anaheim&quot;,&quot;stat (truncated)...
+20:28:51.493 [reactor-http-nio-15] DEBUG org.springframework.core.codec.StringDecoder - [48b51c57] Decoded &quot;[{&quot;longitude&quot;:-117.922008,&quot;latitude&quot;:33.817595,&quot;attractionName&quot;:&quot;Disneyland&quot;,&quot;city&quot;:&quot;Anaheim&quot;,&quot;stat (truncated)...
+20:28:51.493 [reactor-http-nio-16] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getAttractions, connection=PooledConnection{channel=[id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081]}}, [disconnecting])
+20:28:51.493 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getAttractions, connection=PooledConnection{channel=[id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081]}}, [disconnecting])
+20:28:51.493 [reactor-http-nio-16] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] Releasing channel
+20:28:51.493 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Releasing channel
+20:28:51.493 [reactor-http-nio-16] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] Channel cleaned, now 1 active connections and 1 inactive connections
+20:28:51.494 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Channel cleaned, now 0 active connections and 2 inactive connections
+20:28:51.499 [Test worker] INFO tourGuide.service.TourGuideService - TestMode enabled
+20:28:51.499 [Test worker] DEBUG tourGuide.service.TourGuideService - Initializing users
+20:28:51.499 [Test worker] DEBUG tourGuide.service.TourGuideService - Created 0 internal test users.
+20:28:51.499 [Test worker] DEBUG tourGuide.service.TourGuideService - Finished initializing users
+20:28:51.499 [pool-1-thread-1] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [7066e5c6] HTTP GET http://localhost:8081/getUserLocation?userId=c1f4eb96-cf79-425c-9644-844e1c00a8b3
+20:28:51.499 [pool-3-thread-1] DEBUG tourGuide.tracker.Tracker - Begin Tracker. Tracking 0 users.
+20:28:51.500 [pool-3-thread-1] DEBUG tourGuide.tracker.Tracker - Tracker Time Elapsed: 0 seconds.
+20:28:51.500 [pool-1-thread-1] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [7066e5c6] Cancel signal (to close connection)
+20:28:51.500 [pool-3-thread-1] DEBUG tourGuide.tracker.Tracker - Tracker sleeping
+20:28:51.500 [reactor-http-nio-16] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] Channel acquired, now 1 active connections and 1 inactive connections
+20:28:51.500 [Test worker] INFO tourGuide.service.TourGuideService - TestMode enabled
+20:28:51.500 [Test worker] DEBUG tourGuide.service.TourGuideService - Initializing users
+20:28:51.500 [reactor-http-nio-16] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] Handler is being applied: {uri=http://localhost:8081/getUserLocation?userId=c1f4eb96-cf79-425c-9644-844e1c00a8b3, method=GET}
+20:28:51.500 [Test worker] DEBUG tourGuide.service.TourGuideService - Created 0 internal test users.
+20:28:51.500 [Test worker] DEBUG tourGuide.service.TourGuideService - Finished initializing users
+20:28:51.501 [pool-4-thread-1] DEBUG tourGuide.tracker.Tracker - Begin Tracker. Tracking 0 users.
+20:28:51.501 [pool-4-thread-1] DEBUG tourGuide.tracker.Tracker - Tracker Time Elapsed: 0 seconds.
+20:28:51.501 [pool-4-thread-1] DEBUG tourGuide.tracker.Tracker - Tracker sleeping
+20:28:51.501 [Test worker] INFO tourGuide.service.TourGuideService - TestMode enabled
+20:28:51.501 [Test worker] DEBUG tourGuide.service.TourGuideService - Initializing users
+20:28:51.501 [Test worker] DEBUG tourGuide.service.TourGuideService - Created 0 internal test users.
+20:28:51.501 [Test worker] DEBUG tourGuide.service.TourGuideService - Finished initializing users
+20:28:51.501 [reactor-http-nio-16] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getUserLocation?userId=c1f4eb96-cf79-425c-9644-844e1c00a8b3, connection=PooledConnection{channel=[id: 0xf50d03c3, L:/127.0.0.1:49866 - R:localhost/127.0.0.1:8081]}}, [request_sent])
+20:28:51.503 [pool-5-thread-1] DEBUG tourGuide.tracker.Tracker - Begin Tracker. Tracking 0 users.
+20:28:51.504 [pool-5-thread-1] DEBUG tourGuide.tracker.Tracker - Tracker Time Elapsed: 0 seconds.
+20:28:51.504 [pool-5-thread-1] DEBUG tourGuide.tracker.Tracker - Tracker sleeping
+20:28:51.504 [reactor-http-nio-16] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0xf50d03c3, L:/127.0.0.1:49866 ! R:localhost/127.0.0.1:8081] Channel cleaned, now 0 active connections and 2 inactive connections
+20:28:51.504 [reactor-http-nio-16] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0xf50d03c3, L:/127.0.0.1:49866 ! R:localhost/127.0.0.1:8081] Channel closed, now 0 active connections and 1 inactive connections
+20:28:51.549 [Test worker] INFO tourGuide.service.TourGuideService - TestMode enabled
+20:28:51.549 [Test worker] DEBUG tourGuide.service.TourGuideService - Initializing users
+20:28:51.549 [Test worker] DEBUG tourGuide.service.TourGuideService - Created 0 internal test users.
+20:28:51.550 [Test worker] DEBUG tourGuide.service.TourGuideService - Finished initializing users
+20:28:51.550 [pool-6-thread-1] DEBUG tourGuide.tracker.Tracker - Begin Tracker. Tracking 0 users.
+20:28:51.550 [pool-6-thread-1] DEBUG tourGuide.tracker.Tracker - Tracker Time Elapsed: 0 seconds.
+20:28:51.550 [pool-6-thread-1] DEBUG tourGuide.tracker.Tracker - Tracker sleeping
+20:28:51.551 [Test worker] INFO tourGuide.service.TourGuideService - TestMode enabled
+20:28:51.551 [Test worker] DEBUG tourGuide.service.TourGuideService - Initializing users
+20:28:51.551 [Test worker] DEBUG tourGuide.service.TourGuideService - Created 0 internal test users.
+20:28:51.551 [Test worker] DEBUG tourGuide.service.TourGuideService - Finished initializing users
+20:28:51.552 [pool-7-thread-1] DEBUG tourGuide.tracker.Tracker - Begin Tracker. Tracking 0 users.
+20:28:51.552 [pool-7-thread-1] DEBUG tourGuide.tracker.Tracker - Tracker Time Elapsed: 0 seconds.
+20:28:51.552 [pool-7-thread-1] DEBUG tourGuide.tracker.Tracker - Tracker sleeping
+20:28:51.553 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [3762379d] HTTP GET http://localhost:8081/getUserLocation?userId=48d5d0df-acb2-4f91-8677-42e86d230a3e
+20:28:51.553 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Channel acquired, now 1 active connections and 0 inactive connections
+20:28:51.554 [reactor-http-nio-15] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Handler is being applied: {uri=http://localhost:8081/getUserLocation?userId=48d5d0df-acb2-4f91-8677-42e86d230a3e, method=GET}
+20:28:51.555 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getUserLocation?userId=48d5d0df-acb2-4f91-8677-42e86d230a3e, connection=PooledConnection{channel=[id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081]}}, [request_sent])
+20:28:51.649 [reactor-http-nio-15] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:51 GMT]
+20:28:51.650 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getUserLocation?userId=48d5d0df-acb2-4f91-8677-42e86d230a3e, connection=PooledConnection{channel=[id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081]}}, [response_received])
+20:28:51.650 [reactor-http-nio-15] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [3762379d] Response 200 OK
+20:28:51.650 [reactor-http-nio-15] DEBUG reactor.netty.channel.FluxReceive - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:51.651 [reactor-http-nio-15] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Received last HTTP packet
+20:28:51.651 [reactor-http-nio-15] DEBUG org.springframework.core.codec.StringDecoder - [3762379d] Decoded &quot;{&quot;userId&quot;:&quot;48d5d0df-acb2-4f91-8677-42e86d230a3e&quot;,&quot;location&quot;:{&quot;longitude&quot;:87.688428,&quot;latitude&quot;:-65.4 (truncated)...
+20:28:51.651 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getUserLocation?userId=48d5d0df-acb2-4f91-8677-42e86d230a3e, connection=PooledConnection{channel=[id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081]}}, [disconnecting])
+20:28:51.651 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Releasing channel
+20:28:51.651 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Channel cleaned, now 0 active connections and 1 inactive connections
+20:28:51.653 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [5b75bb86] HTTP GET http://localhost:8081/getAttractions
+20:28:51.659 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Channel acquired, now 1 active connections and 0 inactive connections
+20:28:51.660 [reactor-http-nio-15] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Handler is being applied: {uri=http://localhost:8081/getAttractions, method=GET}
+20:28:51.660 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getAttractions, connection=PooledConnection{channel=[id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081]}}, [request_sent])
+20:28:51.674 [reactor-http-nio-15] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:51 GMT]
+20:28:51.674 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getAttractions, connection=PooledConnection{channel=[id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081]}}, [response_received])
+20:28:51.674 [reactor-http-nio-15] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [5b75bb86] Response 200 OK
+20:28:51.675 [reactor-http-nio-15] DEBUG reactor.netty.channel.FluxReceive - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:51.675 [reactor-http-nio-15] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Received last HTTP packet
+20:28:51.676 [reactor-http-nio-15] DEBUG org.springframework.core.codec.StringDecoder - [5b75bb86] Decoded &quot;[{&quot;longitude&quot;:-117.922008,&quot;latitude&quot;:33.817595,&quot;attractionName&quot;:&quot;Disneyland&quot;,&quot;city&quot;:&quot;Anaheim&quot;,&quot;stat (truncated)...
+20:28:51.676 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getAttractions, connection=PooledConnection{channel=[id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081]}}, [disconnecting])
+20:28:51.676 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Releasing channel
+20:28:51.677 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Channel cleaned, now 0 active connections and 1 inactive connections
+20:28:51.678 [Test worker] INFO tourGuide.service.TourGuideService - TestMode enabled
+20:28:51.678 [Test worker] DEBUG tourGuide.service.TourGuideService - Initializing users
+20:28:51.678 [Test worker] DEBUG tourGuide.service.TourGuideService - Created 0 internal test users.
+20:28:51.678 [Test worker] DEBUG tourGuide.service.TourGuideService - Finished initializing users
+20:28:51.679 [pool-8-thread-1] DEBUG tourGuide.tracker.Tracker - Begin Tracker. Tracking 0 users.
+20:28:51.679 [pool-8-thread-1] DEBUG tourGuide.tracker.Tracker - Tracker Time Elapsed: 0 seconds.
+20:28:51.679 [pool-8-thread-1] DEBUG tourGuide.tracker.Tracker - Tracker sleeping
+20:28:51.680 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [42a9f3a2] HTTP GET http://localhost:8081/getAttractions
+20:28:51.680 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Channel acquired, now 1 active connections and 0 inactive connections
+20:28:51.680 [reactor-http-nio-15] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Handler is being applied: {uri=http://localhost:8081/getAttractions, method=GET}
+20:28:51.681 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getAttractions, connection=PooledConnection{channel=[id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081]}}, [request_sent])
+20:28:51.694 [reactor-http-nio-15] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:51 GMT]
+20:28:51.695 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getAttractions, connection=PooledConnection{channel=[id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081]}}, [response_received])
+20:28:51.695 [reactor-http-nio-15] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [42a9f3a2] Response 200 OK
+20:28:51.695 [reactor-http-nio-15] DEBUG reactor.netty.channel.FluxReceive - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:51.696 [reactor-http-nio-15] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Received last HTTP packet
+20:28:51.696 [reactor-http-nio-15] DEBUG org.springframework.core.codec.StringDecoder - [42a9f3a2] Decoded &quot;[{&quot;longitude&quot;:-117.922008,&quot;latitude&quot;:33.817595,&quot;attractionName&quot;:&quot;Disneyland&quot;,&quot;city&quot;:&quot;Anaheim&quot;,&quot;stat (truncated)...
+20:28:51.696 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getAttractions, connection=PooledConnection{channel=[id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081]}}, [disconnecting])
+20:28:51.697 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Releasing channel
+20:28:51.697 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Channel cleaned, now 0 active connections and 1 inactive connections
+20:28:51.698 [Test worker] INFO tourGuide.service.TourGuideService - TestMode enabled
+20:28:51.698 [Test worker] DEBUG tourGuide.service.TourGuideService - Initializing users
+20:28:51.698 [Test worker] DEBUG tourGuide.service.TourGuideService - Created 0 internal test users.
+20:28:51.698 [Test worker] DEBUG tourGuide.service.TourGuideService - Finished initializing users
+20:28:51.699 [pool-9-thread-1] DEBUG tourGuide.tracker.Tracker - Begin Tracker. Tracking 0 users.
+20:28:51.699 [pool-9-thread-1] DEBUG tourGuide.tracker.Tracker - Tracker Time Elapsed: 0 seconds.
+20:28:51.699 [pool-9-thread-1] DEBUG tourGuide.tracker.Tracker - Tracker sleeping
+20:28:51.701 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [7658c00b] HTTP GET http://localhost:8081/getAttractions
+20:28:51.702 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Channel acquired, now 1 active connections and 0 inactive connections
+20:28:51.702 [reactor-http-nio-15] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Handler is being applied: {uri=http://localhost:8081/getAttractions, method=GET}
+20:28:51.702 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getAttractions, connection=PooledConnection{channel=[id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081]}}, [request_sent])
+20:28:51.715 [reactor-http-nio-15] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:51 GMT]
+20:28:51.715 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getAttractions, connection=PooledConnection{channel=[id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081]}}, [response_received])
+20:28:51.715 [reactor-http-nio-15] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [7658c00b] Response 200 OK
+20:28:51.715 [reactor-http-nio-15] DEBUG reactor.netty.channel.FluxReceive - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:51.716 [reactor-http-nio-15] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Received last HTTP packet
+20:28:51.716 [reactor-http-nio-15] DEBUG org.springframework.core.codec.StringDecoder - [7658c00b] Decoded &quot;[{&quot;longitude&quot;:-117.922008,&quot;latitude&quot;:33.817595,&quot;attractionName&quot;:&quot;Disneyland&quot;,&quot;city&quot;:&quot;Anaheim&quot;,&quot;stat (truncated)...
+20:28:51.716 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] onStateChange(GET{uri=/getAttractions, connection=PooledConnection{channel=[id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081]}}, [disconnecting])
+20:28:51.717 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Releasing channel
+20:28:51.717 [reactor-http-nio-15] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x05482a00, L:/127.0.0.1:49865 - R:localhost/127.0.0.1:8081] Channel cleaned, now 0 active connections and 1 inactive connections
+20:28:51.720 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [5146c6c8] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=3112a02d-5355-488e-a8a8-132c07fd7b4c&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:28:51.720 [Test worker] DEBUG reactor.netty.resources.PooledConnectionProvider - Creating new client pool [http] for localhost/&lt;unresolved&gt;:8082
+20:28:51.721 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f] Created new pooled channel, now 0 active connections and 1 inactive connections
+20:28:51.721 [reactor-http-nio-11] DEBUG reactor.netty.channel.BootstrapHandlers - [id: 0x6e7a501f] Initialized pipeline DefaultChannelPipeline{(BootstrapHandlers$BootstrapInitializerHandler#0 = reactor.netty.channel.BootstrapHandlers$BootstrapInitializerHandler), (SimpleChannelPool$1#0 = io.netty.channel.pool.SimpleChannelPool$1), (reactor.left.httpCodec = io.netty.handler.codec.http.HttpClientCodec), (reactor.left.decompressor = io.netty.handler.codec.http.HttpContentDecompressor), (reactor.right.reactiveBridge = reactor.netty.channel.ChannelOperationsHandler)}
+20:28:51.722 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}, [connected])
+20:28:51.722 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [configured])
+20:28:51.722 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Registering pool release on close event for channel
+20:28:51.722 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=3112a02d-5355-488e-a8a8-132c07fd7b4c&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:28:51.733 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=3112a02d-5355-488e-a8a8-132c07fd7b4c&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:28:51.733 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel connected, now 1 active connections and 0 inactive connections
+20:28:52.126 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:52 GMT]
+20:28:52.126 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=3112a02d-5355-488e-a8a8-132c07fd7b4c&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:28:52.127 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [5146c6c8] Response 200 OK
+20:28:52.128 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:52.128 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:28:52.129 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [5146c6c8] Decoded &quot;394&quot;
+20:28:52.129 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=3112a02d-5355-488e-a8a8-132c07fd7b4c&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:28:52.129 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:28:52.130 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:28:52.131 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [3abd02ca] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=8751a4fb-03f4-4d73-929b-71e7786dc7cc&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:28:52.132 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:28:52.132 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=8751a4fb-03f4-4d73-929b-71e7786dc7cc&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:28:52.134 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=8751a4fb-03f4-4d73-929b-71e7786dc7cc&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:28:52.228 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:52 GMT]
+20:28:52.229 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=8751a4fb-03f4-4d73-929b-71e7786dc7cc&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:28:52.229 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [3abd02ca] Response 200 OK
+20:28:52.230 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:52.231 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:28:52.232 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [3abd02ca] Decoded &quot;988&quot;
+20:28:52.233 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=8751a4fb-03f4-4d73-929b-71e7786dc7cc&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:28:52.233 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:28:52.234 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:28:52.235 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [a55c50e] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=497775f2-a88c-4dc0-95a3-91795be89659&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:28:52.236 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:28:52.236 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=497775f2-a88c-4dc0-95a3-91795be89659&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:28:52.237 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=497775f2-a88c-4dc0-95a3-91795be89659&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:28:53.189 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:53 GMT]
+20:28:53.189 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=497775f2-a88c-4dc0-95a3-91795be89659&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:28:53.190 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [a55c50e] Response 200 OK
+20:28:53.191 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:53.191 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:28:53.192 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [a55c50e] Decoded &quot;670&quot;
+20:28:53.192 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=497775f2-a88c-4dc0-95a3-91795be89659&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:28:53.192 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:28:53.192 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:28:53.193 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [50229c91] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=691b8769-3903-4f15-9112-ad381dd38f50&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:28:53.194 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:28:53.194 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=691b8769-3903-4f15-9112-ad381dd38f50&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:28:53.194 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=691b8769-3903-4f15-9112-ad381dd38f50&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:28:53.628 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:53 GMT]
+20:28:53.628 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=691b8769-3903-4f15-9112-ad381dd38f50&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:28:53.629 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [50229c91] Response 200 OK
+20:28:53.630 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:53.631 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:28:53.631 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [50229c91] Decoded &quot;657&quot;
+20:28:53.631 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=691b8769-3903-4f15-9112-ad381dd38f50&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:28:53.632 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:28:53.632 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:28:53.633 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [373560db] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=462c74df-5454-40aa-af69-55a84f27b86b&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:28:53.633 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:28:53.634 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=462c74df-5454-40aa-af69-55a84f27b86b&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:28:53.635 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=462c74df-5454-40aa-af69-55a84f27b86b&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:28:53.854 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:53 GMT]
+20:28:53.855 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=462c74df-5454-40aa-af69-55a84f27b86b&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:28:53.855 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [373560db] Response 200 OK
+20:28:53.855 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:53.856 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:28:53.856 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [373560db] Decoded &quot;336&quot;
+20:28:53.856 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=462c74df-5454-40aa-af69-55a84f27b86b&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:28:53.856 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:28:53.856 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:28:53.857 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [654c9fa5] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=e7620312-bc9c-460a-9c46-0b3a4bbb9a81&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:28:53.857 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:28:53.858 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=e7620312-bc9c-460a-9c46-0b3a4bbb9a81&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:28:53.859 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=e7620312-bc9c-460a-9c46-0b3a4bbb9a81&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:28:53.918 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:53 GMT]
+20:28:53.918 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=e7620312-bc9c-460a-9c46-0b3a4bbb9a81&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:28:53.918 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [654c9fa5] Response 200 OK
+20:28:53.919 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:53.920 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:28:53.920 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [654c9fa5] Decoded &quot;639&quot;
+20:28:53.920 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=e7620312-bc9c-460a-9c46-0b3a4bbb9a81&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:28:53.920 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:28:53.920 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:28:53.922 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [41154bb7] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=c50eb50a-310e-4d2f-8ba9-fdabe9b0288b&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:28:53.922 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:28:53.923 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=c50eb50a-310e-4d2f-8ba9-fdabe9b0288b&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:28:53.924 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=c50eb50a-310e-4d2f-8ba9-fdabe9b0288b&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:28:54.305 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:54 GMT]
+20:28:54.306 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=c50eb50a-310e-4d2f-8ba9-fdabe9b0288b&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:28:54.306 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [41154bb7] Response 200 OK
+20:28:54.307 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:54.308 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:28:54.308 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [41154bb7] Decoded &quot;298&quot;
+20:28:54.309 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=c50eb50a-310e-4d2f-8ba9-fdabe9b0288b&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:28:54.309 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:28:54.309 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:28:54.310 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [5978110] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=6ced3083-9509-4b1d-9ddf-8998015d78a6&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:28:54.311 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:28:54.311 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=6ced3083-9509-4b1d-9ddf-8998015d78a6&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:28:54.313 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=6ced3083-9509-4b1d-9ddf-8998015d78a6&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:28:54.575 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:54 GMT]
+20:28:54.576 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=6ced3083-9509-4b1d-9ddf-8998015d78a6&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:28:54.576 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [5978110] Response 200 OK
+20:28:54.577 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:54.578 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:28:54.579 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [5978110] Decoded &quot;133&quot;
+20:28:54.579 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=6ced3083-9509-4b1d-9ddf-8998015d78a6&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:28:54.580 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:28:54.580 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:28:54.581 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [19381ac1] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=3cadc425-9d15-43ea-83d7-63f70347de2b&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:28:54.583 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:28:54.585 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=3cadc425-9d15-43ea-83d7-63f70347de2b&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:28:54.588 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=3cadc425-9d15-43ea-83d7-63f70347de2b&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:28:54.809 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:54 GMT]
+20:28:54.809 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=3cadc425-9d15-43ea-83d7-63f70347de2b&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:28:54.810 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [19381ac1] Response 200 OK
+20:28:54.811 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:54.812 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:28:54.812 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [19381ac1] Decoded &quot;315&quot;
+20:28:54.812 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=3cadc425-9d15-43ea-83d7-63f70347de2b&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:28:54.812 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:28:54.813 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:28:54.814 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [18081ff4] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=8b9098da-693b-4361-9926-5d9e39849661&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:28:54.815 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:28:54.815 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=8b9098da-693b-4361-9926-5d9e39849661&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:28:54.817 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=8b9098da-693b-4361-9926-5d9e39849661&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:28:55.307 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:55 GMT]
+20:28:55.308 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=8b9098da-693b-4361-9926-5d9e39849661&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:28:55.308 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [18081ff4] Response 200 OK
+20:28:55.309 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:55.310 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:28:55.310 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [18081ff4] Decoded &quot;406&quot;
+20:28:55.310 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=8b9098da-693b-4361-9926-5d9e39849661&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:28:55.311 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:28:55.311 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:28:55.312 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [732bb7b1] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=08ce9e7c-2766-4662-ad9e-62d25c3b88a7&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:28:55.313 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:28:55.313 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=08ce9e7c-2766-4662-ad9e-62d25c3b88a7&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:28:55.314 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=08ce9e7c-2766-4662-ad9e-62d25c3b88a7&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:28:56.052 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:55 GMT]
+20:28:56.052 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=08ce9e7c-2766-4662-ad9e-62d25c3b88a7&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:28:56.053 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [732bb7b1] Response 200 OK
+20:28:56.054 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:56.055 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:28:56.055 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [732bb7b1] Decoded &quot;142&quot;
+20:28:56.056 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=08ce9e7c-2766-4662-ad9e-62d25c3b88a7&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:28:56.056 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:28:56.056 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:28:56.057 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [4a8d37c5] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=dc522f8f-3352-4f40-97fa-411c3d9e3f4b&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:28:56.058 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:28:56.058 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=dc522f8f-3352-4f40-97fa-411c3d9e3f4b&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:28:56.060 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=dc522f8f-3352-4f40-97fa-411c3d9e3f4b&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:28:56.757 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:56 GMT]
+20:28:56.757 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=dc522f8f-3352-4f40-97fa-411c3d9e3f4b&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:28:56.758 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [4a8d37c5] Response 200 OK
+20:28:56.759 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:56.760 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:28:56.760 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [4a8d37c5] Decoded &quot;840&quot;
+20:28:56.760 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=dc522f8f-3352-4f40-97fa-411c3d9e3f4b&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:28:56.761 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:28:56.761 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:28:56.762 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [13bad247] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=b9da689f-f3b3-43c6-91d3-6a39a90a4449&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:28:56.763 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:28:56.763 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=b9da689f-f3b3-43c6-91d3-6a39a90a4449&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:28:56.764 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=b9da689f-f3b3-43c6-91d3-6a39a90a4449&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:28:57.202 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:56 GMT]
+20:28:57.202 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=b9da689f-f3b3-43c6-91d3-6a39a90a4449&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:28:57.203 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [13bad247] Response 200 OK
+20:28:57.204 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:57.204 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:28:57.205 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [13bad247] Decoded &quot;287&quot;
+20:28:57.205 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=b9da689f-f3b3-43c6-91d3-6a39a90a4449&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:28:57.205 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:28:57.205 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:28:57.206 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [4b95987b] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=b04d0261-59d4-43ae-a435-aa8a0190e922&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:28:57.207 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:28:57.208 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=b04d0261-59d4-43ae-a435-aa8a0190e922&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:28:57.209 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=b04d0261-59d4-43ae-a435-aa8a0190e922&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:28:58.211 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:58 GMT]
+20:28:58.212 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=b04d0261-59d4-43ae-a435-aa8a0190e922&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:28:58.212 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [4b95987b] Response 200 OK
+20:28:58.214 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:58.214 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:28:58.215 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [4b95987b] Decoded &quot;832&quot;
+20:28:58.215 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=b04d0261-59d4-43ae-a435-aa8a0190e922&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:28:58.215 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:28:58.215 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:28:58.217 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [65ad2887] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=dbed639b-aa4c-45e6-aba5-0aaed5bed94e&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:28:58.218 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:28:58.218 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=dbed639b-aa4c-45e6-aba5-0aaed5bed94e&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:28:58.220 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=dbed639b-aa4c-45e6-aba5-0aaed5bed94e&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:28:58.684 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:58 GMT]
+20:28:58.685 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=dbed639b-aa4c-45e6-aba5-0aaed5bed94e&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:28:58.686 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [65ad2887] Response 200 OK
+20:28:58.687 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:58.688 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:28:58.688 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [65ad2887] Decoded &quot;110&quot;
+20:28:58.689 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=dbed639b-aa4c-45e6-aba5-0aaed5bed94e&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:28:58.689 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:28:58.689 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:28:58.690 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [463d08e8] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=d5b21d52-62ee-4edb-8f03-27208f19fba9&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:28:58.691 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:28:58.691 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=d5b21d52-62ee-4edb-8f03-27208f19fba9&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:28:58.692 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=d5b21d52-62ee-4edb-8f03-27208f19fba9&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:28:58.868 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:58 GMT]
+20:28:58.868 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=d5b21d52-62ee-4edb-8f03-27208f19fba9&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:28:58.869 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [463d08e8] Response 200 OK
+20:28:58.870 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:58.871 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:28:58.871 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [463d08e8] Decoded &quot;188&quot;
+20:28:58.871 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=d5b21d52-62ee-4edb-8f03-27208f19fba9&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:28:58.871 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:28:58.872 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:28:58.873 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [3d0d282] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=cf26c841-6d40-48a9-a728-31072cd6567d&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:28:58.873 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:28:58.873 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=cf26c841-6d40-48a9-a728-31072cd6567d&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:28:58.874 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=cf26c841-6d40-48a9-a728-31072cd6567d&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:28:59.372 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:59 GMT]
+20:28:59.373 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=cf26c841-6d40-48a9-a728-31072cd6567d&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:28:59.373 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [3d0d282] Response 200 OK
+20:28:59.374 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:59.375 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:28:59.376 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [3d0d282] Decoded &quot;434&quot;
+20:28:59.376 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=cf26c841-6d40-48a9-a728-31072cd6567d&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:28:59.376 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:28:59.376 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:28:59.377 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [64e1c4c3] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=6679c5a2-f2ea-478c-b4ca-cca79caf1dc4&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:28:59.378 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:28:59.378 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=6679c5a2-f2ea-478c-b4ca-cca79caf1dc4&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:28:59.379 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=6679c5a2-f2ea-478c-b4ca-cca79caf1dc4&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:28:59.779 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:58:59 GMT]
+20:28:59.779 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=6679c5a2-f2ea-478c-b4ca-cca79caf1dc4&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:28:59.780 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [64e1c4c3] Response 200 OK
+20:28:59.780 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:28:59.781 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:28:59.782 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [64e1c4c3] Decoded &quot;121&quot;
+20:28:59.782 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=6679c5a2-f2ea-478c-b4ca-cca79caf1dc4&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:28:59.782 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:28:59.782 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:28:59.783 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [680431c8] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=1cf5135d-19b3-4289-9a20-72070cdbc70d&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:28:59.784 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:28:59.785 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=1cf5135d-19b3-4289-9a20-72070cdbc70d&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:28:59.786 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=1cf5135d-19b3-4289-9a20-72070cdbc70d&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:29:00.706 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:59:00 GMT]
+20:29:00.706 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=1cf5135d-19b3-4289-9a20-72070cdbc70d&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:29:00.707 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [680431c8] Response 200 OK
+20:29:00.708 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:29:00.709 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:29:00.710 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [680431c8] Decoded &quot;422&quot;
+20:29:00.710 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=1cf5135d-19b3-4289-9a20-72070cdbc70d&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:29:00.710 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:29:00.710 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:29:00.711 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [46500e68] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=b3154945-a857-461f-86d3-848914ab5761&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:29:00.712 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:29:00.713 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=b3154945-a857-461f-86d3-848914ab5761&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:29:00.714 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=b3154945-a857-461f-86d3-848914ab5761&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:29:00.800 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:59:00 GMT]
+20:29:00.800 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=b3154945-a857-461f-86d3-848914ab5761&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:29:00.800 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [46500e68] Response 200 OK
+20:29:00.801 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:29:00.802 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:29:00.802 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [46500e68] Decoded &quot;285&quot;
+20:29:00.802 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=b3154945-a857-461f-86d3-848914ab5761&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:29:00.803 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:29:00.803 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:29:00.804 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [439180e2] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=42382737-3e8b-4acf-982e-76f575ec80db&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:29:00.805 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:29:00.805 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=42382737-3e8b-4acf-982e-76f575ec80db&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:29:00.806 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=42382737-3e8b-4acf-982e-76f575ec80db&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:29:01.109 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:59:00 GMT]
+20:29:01.110 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=42382737-3e8b-4acf-982e-76f575ec80db&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:29:01.110 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [439180e2] Response 200 OK
+20:29:01.111 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:29:01.112 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:29:01.112 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [439180e2] Decoded &quot;648&quot;
+20:29:01.113 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=42382737-3e8b-4acf-982e-76f575ec80db&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:29:01.113 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:29:01.113 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:29:01.114 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [293c838f] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=aacea919-1424-402e-8453-6278f7f281e6&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:29:01.115 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:29:01.115 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=aacea919-1424-402e-8453-6278f7f281e6&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:29:01.116 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=aacea919-1424-402e-8453-6278f7f281e6&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:29:01.323 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:59:00 GMT]
+20:29:01.323 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=aacea919-1424-402e-8453-6278f7f281e6&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:29:01.323 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [293c838f] Response 200 OK
+20:29:01.324 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:29:01.325 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:29:01.326 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [293c838f] Decoded &quot;907&quot;
+20:29:01.326 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=aacea919-1424-402e-8453-6278f7f281e6&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:29:01.326 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:29:01.326 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:29:01.327 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [60ff6d11] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=5e50c218-3cf4-43e4-a74c-e497f8cc3168&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:29:01.328 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:29:01.328 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=5e50c218-3cf4-43e4-a74c-e497f8cc3168&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:29:01.330 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=5e50c218-3cf4-43e4-a74c-e497f8cc3168&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:29:01.999 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:59:01 GMT]
+20:29:01.999 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=5e50c218-3cf4-43e4-a74c-e497f8cc3168&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:29:02.000 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [60ff6d11] Response 200 OK
+20:29:02.001 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:29:02.002 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:29:02.002 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [60ff6d11] Decoded &quot;490&quot;
+20:29:02.002 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=5e50c218-3cf4-43e4-a74c-e497f8cc3168&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:29:02.002 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:29:02.003 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:29:02.004 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [261a1c28] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=66e43ee6-2b51-43e6-8843-88a04afa0414&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:29:02.004 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:29:02.005 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=66e43ee6-2b51-43e6-8843-88a04afa0414&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:29:02.006 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=66e43ee6-2b51-43e6-8843-88a04afa0414&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:29:02.031 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:59:01 GMT]
+20:29:02.031 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=66e43ee6-2b51-43e6-8843-88a04afa0414&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:29:02.031 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [261a1c28] Response 200 OK
+20:29:02.032 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:29:02.033 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:29:02.033 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [261a1c28] Decoded &quot;868&quot;
+20:29:02.034 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=66e43ee6-2b51-43e6-8843-88a04afa0414&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:29:02.034 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:29:02.034 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:29:02.035 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [69c31e99] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=ca4477d4-fde0-442f-bc40-c529bdceb70c&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:29:02.036 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:29:02.036 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=ca4477d4-fde0-442f-bc40-c529bdceb70c&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:29:02.037 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=ca4477d4-fde0-442f-bc40-c529bdceb70c&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:29:02.074 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:59:01 GMT]
+20:29:02.074 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=ca4477d4-fde0-442f-bc40-c529bdceb70c&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:29:02.075 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [69c31e99] Response 200 OK
+20:29:02.076 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:29:02.076 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:29:02.077 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [69c31e99] Decoded &quot;284&quot;
+20:29:02.077 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=ca4477d4-fde0-442f-bc40-c529bdceb70c&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:29:02.077 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:29:02.077 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+20:29:02.079 [Test worker] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [24aec8d5] HTTP GET http://localhost:8082/getAttractionRewardPoints?attractionId=39d93e40-55fd-4fab-b780-5183495ceaeb&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f
+20:29:02.080 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel acquired, now 1 active connections and 0 inactive connections
+20:29:02.080 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientConnect - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Handler is being applied: {uri=http://localhost:8082/getAttractionRewardPoints?attractionId=39d93e40-55fd-4fab-b780-5183495ceaeb&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, method=GET}
+20:29:02.082 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=39d93e40-55fd-4fab-b780-5183495ceaeb&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [request_sent])
+20:29:02.222 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received response (auto-read:false) : [Content-Type=application/json, Transfer-Encoding=chunked, Date=Tue, 29 Jun 2021 14:59:01 GMT]
+20:29:02.222 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=39d93e40-55fd-4fab-b780-5183495ceaeb&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [response_received])
+20:29:02.223 [reactor-http-nio-11] DEBUG org.springframework.web.reactive.function.client.ExchangeFunctions - [24aec8d5] Response 200 OK
+20:29:02.224 [reactor-http-nio-11] DEBUG reactor.netty.channel.FluxReceive - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Subscribing inbound receiver [pending: 0, cancelled:false, inboundDone: false]
+20:29:02.224 [reactor-http-nio-11] DEBUG reactor.netty.http.client.HttpClientOperations - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Received last HTTP packet
+20:29:02.225 [reactor-http-nio-11] DEBUG org.springframework.core.codec.StringDecoder - [24aec8d5] Decoded &quot;475&quot;
+20:29:02.225 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] onStateChange(GET{uri=/getAttractionRewardPoints?attractionId=39d93e40-55fd-4fab-b780-5183495ceaeb&amp;userId=cb9389a8-a1b4-48e8-88a6-ee08b143a07f, connection=PooledConnection{channel=[id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082]}}, [disconnecting])
+20:29:02.225 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Releasing channel
+20:29:02.225 [reactor-http-nio-11] DEBUG reactor.netty.resources.PooledConnectionProvider - [id: 0x6e7a501f, L:/127.0.0.1:49867 - R:localhost/127.0.0.1:8082] Channel cleaned, now 0 active connections and 1 inactive connections
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>Jun 29, 2021 8:28:50 PM org.javamoney.moneta.DefaultMonetaryContextFactory createMonetaryContextNonNullConfig
+INFO: Using custom MathContext: precision=256, roundingMode=HALF_EVEN
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.0.2</a> at 29-Jun-2021, 8:29:42 pm</p>
+</div>
+</div>
+</body>
+</html>

@@ -23,8 +23,6 @@ tourGuide/Application.java
  tourGuide.Application
 tourGuide/tracker/Tracker.java
  tourGuide.tracker.Tracker
-tourGuide/TourGuideModule.java
- tourGuide.TourGuideModule
 tourGuide/gpsUtil/VisitedLocation.java
  tourGuide.gpsUtil.VisitedLocation
 tourGuide/user/User.java

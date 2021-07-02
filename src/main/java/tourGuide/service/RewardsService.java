@@ -35,6 +35,10 @@ public class RewardsService {
         proximityBuffer = defaultProximityBuffer;
     }
 
+    /**
+     * calculate rewards for visiting a location and updating the reward points
+     * @param user
+     */
     public void calculateRewards(User user) {
         List<VisitedLocation> userLocations = new ArrayList<>(user.getVisitedLocations());
         List<Attraction> attractions = gpsUtilService.getAttractions();
@@ -49,18 +53,42 @@ public class RewardsService {
         }
     }
 
+    /**
+     * check if a particular location is within proximity
+     * @param attraction
+     * @param location
+     * @return true or false
+     */
     public boolean isWithinAttractionProximity(Attraction attraction, Location location) {
         return getDistance(attraction, location) > attractionProximityRange ? false : true;
     }
 
+    /**
+     * check if a particular location is within a proximity buffer
+     * @param visitedLocation
+     * @param attraction
+     * @return true or false
+     */
     private boolean nearAttraction(VisitedLocation visitedLocation, Attraction attraction) {
         return getDistance(attraction, visitedLocation.location) > proximityBuffer ? false : true;
     }
 
+    /**
+     * find reward points
+     * @param attraction
+     * @param user
+     * @return rewards points
+     */
     private int getRewardPoints(Attraction attraction, User user) {
         return rewardCentralService.getAttractionRewardPoints(attraction.attractionId, user.getUserId());
     }
 
+    /**
+     * find distance between two locations
+     * @param loc1 location 1
+     * @param loc2 location 2
+     * @return distance
+     */
     public double getDistance(Location loc1, Location loc2) {
         double lat1 = Math.toRadians(loc1.latitude);
         double lon1 = Math.toRadians(loc1.longitude);
