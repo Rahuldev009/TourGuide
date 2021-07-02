@@ -57,10 +57,20 @@ public class TourGuideService {
         addShutDownHook();
     }
 
+    /**
+     * find user rewards
+     * @param user object
+     * @return list of user rewards points
+     */
     public List<UserReward> getUserRewards(User user) {
         return user.getUserRewards();
     }
 
+    /**
+     * get user location
+     * @param user object
+     * @return returns user last visited location
+     */
     public VisitedLocation getUserLocation(User user) {
         VisitedLocation visitedLocation = (user.getVisitedLocations().size() > 0) ?
                 user.getLastVisitedLocation() :
@@ -68,20 +78,38 @@ public class TourGuideService {
         return visitedLocation;
     }
 
+    /**
+     * find user object from username
+     * @param userName
+     * @return user object
+     */
     public User getUser(String userName) {
         return internalUserMap.get(userName);
     }
 
+    /**
+     * find all users
+     * @return list of all users
+     */
     public List<User> getAllUsers() {
         return internalUserMap.values().stream().collect(Collectors.toList());
     }
 
+    /**
+     * add user to the inmemory database
+     * @param user
+     */
     public void addUser(User user) {
         if (!internalUserMap.containsKey(user.getUserName())) {
             internalUserMap.put(user.getUserName(), user);
         }
     }
 
+    /**
+     * find providers
+     * @param user
+     * @return list of providers
+     */
     public List<Provider> getTripDeals(User user) {
         int cumulatativeRewardPoints = user.getUserRewards().stream().mapToInt(i -> i.getRewardPoints()).sum();
         List<Provider> providers = tripPricer.getPrice(tripPricerApiKey, user.getUserId(), user.getUserPreferences().getNumberOfAdults(),
@@ -90,6 +118,11 @@ public class TourGuideService {
         return providers;
     }
 
+    /**
+     * add location to user's visited location list and update reward points
+     * @param user
+     * @return user location
+     */
     public VisitedLocation trackUserLocation(User user) {
         VisitedLocation visitedLocation = gpsUtilService.getUserLocation(user.getUserId());
         user.addToVisitedLocations(visitedLocation);
@@ -97,6 +130,11 @@ public class TourGuideService {
         return visitedLocation;
     }
 
+    /**
+     * provide a list of nearby attractions
+     * @param visitedLocation
+     * @return list of attractions
+     */
     public List<Attraction> getNearByAttractions(VisitedLocation visitedLocation) {
         List<Attraction> nearbyAttractions = new ArrayList<>();
         for (Attraction attraction : gpsUtilService.getAttractions()) {
@@ -108,8 +146,12 @@ public class TourGuideService {
         return nearbyAttractions;
     }
 
+    /**
+     * returns a list of 5 nearby locations irrespective of distance
+     * @param user
+     * @return list of attractions
+     */
     public List<NearbyAttractionDto> getUserNearbyAttractions(User user) {
-        System.out.println("username ------" + user.getUserName());
         Location userLocation = user.getLastVisitedLocation().location;
         List<NearbyAttractionDto> nearbyAttractionDtos = new ArrayList<>();
         PriorityQueue<NearbyAttractionDto> priorityQueue = new PriorityQueue<>(5, new Comparator<NearbyAttractionDto>() {
@@ -143,6 +185,10 @@ public class TourGuideService {
         return nearbyAttractionDtos;
     }
 
+    /**
+     * find all users current locations
+     * @return userid and location
+     */
     public HashMap<String, Location> getAllUsersCurrentLocation() {
         List<User> userList = getAllUsers();
         HashMap<String, Location> locationList = new HashMap<>();

@@ -11,6 +11,12 @@ import java.util.UUID;
 public class RewardCentralService {
     private Logger logger = LoggerFactory.getLogger(RewardCentralService.class);
 
+    /**
+     * Reward points for visiting particular location
+     * @param attractionId is the unique id of the attraction
+     * @param userId is the unique id of the user
+     * @return rewards point for visiting particular attraction point from current location
+     */
     public int getAttractionRewardPoints(UUID attractionId, UUID userId){
         WebClient.Builder webClientBuilder = WebClient.builder();
         String JsonResponseFrom =webClientBuilder.build()

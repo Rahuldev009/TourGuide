@@ -9,9 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 import tourGuide.dto.NearbyAttractionDto;
 import tourGuide.gpsUtil.Location;
 import tourGuide.gpsUtil.VisitedLocation;
-import tourGuide.service.GpsUtilService;
-import tourGuide.service.RewardCentralService;
-import tourGuide.service.RewardsService;
 import tourGuide.service.TourGuideService;
 import tourGuide.user.User;
 import tourGuide.user.UserPreferences;
@@ -25,67 +22,51 @@ public class TourGuideController {
     private TourGuideService tourGuideService;
 
     @Autowired
-<span class="nc" id="L28">    public TourGuideController(TourGuideService tourGuideService) {</span>
-<span class="nc" id="L29">        this.tourGuideService = tourGuideService;</span>
-<span class="nc" id="L30">    }</span>
+<span class="nc" id="L25">    public TourGuideController(TourGuideService tourGuideService) {</span>
+<span class="nc" id="L26">        this.tourGuideService = tourGuideService;</span>
+<span class="nc" id="L27">    }</span>
 
     @RequestMapping(&quot;/&quot;)
     public String index() {
-<span class="nc" id="L34">        return &quot;Greetings from TourGuide!&quot;;</span>
+<span class="nc" id="L31">        return &quot;Greetings from TourGuide!&quot;;</span>
     }
 
     @RequestMapping(&quot;/getLocation&quot;)
     public String getLocation(@RequestParam String userName) {
-<span class="nc" id="L39">        VisitedLocation visitedLocation = tourGuideService.getUserLocation(getUser(userName));</span>
-<span class="nc" id="L40">        return JsonStream.serialize(visitedLocation.location);</span>
+<span class="nc" id="L36">        VisitedLocation visitedLocation = tourGuideService.getUserLocation(getUser(userName));</span>
+<span class="nc" id="L37">        return JsonStream.serialize(visitedLocation.location);</span>
     }
 
     //  TODO: Change this method to no longer return a List of Attractions.
-    //  Instead: Get the closest five tourist attractions to the user - no matter how far away they are.
-    //  Return a new JSON object that contains:
-    // Name of Tourist attraction,
-    // Tourist attractions lat/long,
-    // The user's location lat/long,
-    // The distance in miles between the user's location and each of the attractions.
-    // The reward points for visiting each Attraction.
-    //    Note: Attraction reward points can be gathered from RewardsCentral
     @RequestMapping(&quot;/getNearbyAttractions&quot;)
     public String getNearbyAttractions(@RequestParam String userName) {
-<span class="nc" id="L54">        User user = getUser(userName);</span>
-<span class="nc" id="L55">        List&lt;NearbyAttractionDto&gt; nearbyAttractionDtos = tourGuideService.getUserNearbyAttractions(user);</span>
-<span class="nc" id="L56">        return JsonStream.serialize(nearbyAttractionDtos);</span>
+<span class="nc" id="L43">        User user = getUser(userName);</span>
+<span class="nc" id="L44">        List&lt;NearbyAttractionDto&gt; nearbyAttractionDtos = tourGuideService.getUserNearbyAttractions(user);</span>
+<span class="nc" id="L45">        return JsonStream.serialize(nearbyAttractionDtos);</span>
     }
 
     @RequestMapping(&quot;/getRewards&quot;)
     public String getRewards(@RequestParam String userName) {
-<span class="nc" id="L61">        return JsonStream.serialize(tourGuideService.getUserRewards(getUser(userName)));</span>
+<span class="nc" id="L50">        return JsonStream.serialize(tourGuideService.getUserRewards(getUser(userName)));</span>
     }
 
     @RequestMapping(&quot;/getAllCurrentLocations&quot;)
     public String getAllCurrentLocations() {
         // TODO: Get a list of every user's most recent location as JSON
-        //- Note: does not use gpsUtil to query for their current location,
-        //        but rather gathers the user's current location from their stored location history.
-        //
-        // Return object should be the just a JSON mapping of userId to Locations similar to:
-        //     {
-        //        &quot;019b04a9-067a-4c76-8817-ee75088c3822&quot;: {&quot;longitude&quot;:-48.188821,&quot;latitude&quot;:74.84371}
-        //        ...
-        //     }
-<span class="nc" id="L75">        HashMap&lt;String, Location&gt; locationList = tourGuideService.getAllUsersCurrentLocation();</span>
-<span class="nc" id="L76">        return JsonStream.serialize(locationList);</span>
+<span class="nc" id="L56">        HashMap&lt;String, Location&gt; locationList = tourGuideService.getAllUsersCurrentLocation();</span>
+<span class="nc" id="L57">        return JsonStream.serialize(locationList);</span>
     }
 
     @RequestMapping(&quot;/getTripDeals&quot;)
     public String getTripDeals(@RequestParam String userName) {
-<span class="nc" id="L81">        List&lt;Provider&gt; providers = tourGuideService.getTripDeals(getUser(userName));</span>
-<span class="nc" id="L82">        return JsonStream.serialize(providers);</span>
+<span class="nc" id="L62">        List&lt;Provider&gt; providers = tourGuideService.getTripDeals(getUser(userName));</span>
+<span class="nc" id="L63">        return JsonStream.serialize(providers);</span>
     }
 
     @RequestMapping(&quot;/getUserPreference&quot;)
     public String getUserPreference(@RequestParam String userName) {
-<span class="nc" id="L87">        User user = getUser(userName);</span>
-<span class="nc" id="L88">        return JsonStream.serialize(user.getUserPreferences());</span>
+<span class="nc" id="L68">        User user = getUser(userName);</span>
+<span class="nc" id="L69">        return JsonStream.serialize(user.getUserPreferences());</span>
     }
 
     @RequestMapping(&quot;/setUserPreference&quot;)
@@ -93,20 +74,20 @@ public class TourGuideController {
                                   @RequestParam Money highPricePoint, @RequestParam int tripDuration,
                                   @RequestParam int ticketQuantity, @RequestParam int numberOfAdults,
                                   @RequestParam int numberOfChildren) {
-<span class="nc" id="L96">        User user = getUser(userName);</span>
-<span class="nc" id="L97">        UserPreferences userPreferences = new UserPreferences();</span>
-<span class="nc" id="L98">        userPreferences.setAttractionProximity(attractionProximity);</span>
-<span class="nc" id="L99">        userPreferences.setLowerPricePoint(lowerPricePoint);</span>
-<span class="nc" id="L100">        userPreferences.setHighPricePoint(highPricePoint);</span>
-<span class="nc" id="L101">        userPreferences.setTripDuration(tripDuration);</span>
-<span class="nc" id="L102">        userPreferences.setTicketQuantity(ticketQuantity);</span>
-<span class="nc" id="L103">        userPreferences.setNumberOfAdults(numberOfAdults);</span>
-<span class="nc" id="L104">        userPreferences.setNumberOfChildren(numberOfChildren);</span>
-<span class="nc" id="L105">        user.setUserPreferences(userPreferences);</span>
-<span class="nc" id="L106">    }</span>
+<span class="nc" id="L77">        User user = getUser(userName);</span>
+<span class="nc" id="L78">        UserPreferences userPreferences = new UserPreferences();</span>
+<span class="nc" id="L79">        userPreferences.setAttractionProximity(attractionProximity);</span>
+<span class="nc" id="L80">        userPreferences.setLowerPricePoint(lowerPricePoint);</span>
+<span class="nc" id="L81">        userPreferences.setHighPricePoint(highPricePoint);</span>
+<span class="nc" id="L82">        userPreferences.setTripDuration(tripDuration);</span>
+<span class="nc" id="L83">        userPreferences.setTicketQuantity(ticketQuantity);</span>
+<span class="nc" id="L84">        userPreferences.setNumberOfAdults(numberOfAdults);</span>
+<span class="nc" id="L85">        userPreferences.setNumberOfChildren(numberOfChildren);</span>
+<span class="nc" id="L86">        user.setUserPreferences(userPreferences);</span>
+<span class="nc" id="L87">    }</span>
 
     private User getUser(String userName) {
-<span class="nc" id="L109">        return tourGuideService.getUser(userName);</span>
+<span class="nc" id="L90">        return tourGuideService.getUser(userName);</span>
     }
 
 

@@ -18,10 +18,10 @@ apply plugin: "jacoco"
 //archivesBaseName = 'tourguide'
 //version = '1.0.0'
 
-//jar {
-//    baseName = 'tourGuide'
-//    archiveVersion =  '1.0.0'
-//}
+bootJar {
+    baseName = 'tourGuide'
+    version =  '1.0.0'
+}
 
 //tasks.withType(Test) {
 //    scanForTestClasses = false

@@ -11,17 +11,22 @@ import java.util.UUID;
 <span class="fc" id="L11">public class RewardCentralService {</span>
 <span class="fc" id="L12">    private Logger logger = LoggerFactory.getLogger(RewardCentralService.class);</span>
 
+    /**
+     * Reward points for visiting particular location
+     * @param attractionId is the unique id of the attraction
+     * @param userId is the unique id of the user
+     * @return rewards point for visiting particular attraction point from current location
+     */
     public int getAttractionRewardPoints(UUID attractionId, UUID userId){
-<span class="fc" id="L15">        WebClient.Builder webClientBuilder = WebClient.builder();</span>
-        //TODO: 1. Write loggers to print response times 2. Use url parameters option instead of appending to the URL
-<span class="fc" id="L17">        String JsonResponseFrom =webClientBuilder.build()</span>
-<span class="fc" id="L18">                .get()</span>
-<span class="fc" id="L19">                .uri(&quot;http://localhost:8082/getAttractionRewardPoints?attractionId=&quot;+attractionId+&quot;&amp;userId=&quot;+userId)</span>
-<span class="fc" id="L20">                .retrieve()</span>
-<span class="fc" id="L21">                .bodyToMono(String.class)</span>
-<span class="fc" id="L22">                .block();</span>
-<span class="fc" id="L23">        return Integer.parseInt(JsonResponseFrom);</span>
-
+<span class="fc" id="L21">        WebClient.Builder webClientBuilder = WebClient.builder();</span>
+<span class="fc" id="L22">        String JsonResponseFrom =webClientBuilder.build()</span>
+<span class="fc" id="L23">                .get()</span>
+<span class="fc" id="L24">                .uri(&quot;http://localhost:8082/getAttractionRewardPoints?attractionId=&quot;+attractionId+&quot;&amp;userId=&quot;+userId)</span>
+<span class="fc" id="L25">                .retrieve()</span>
+<span class="fc" id="L26">                .bodyToMono(String.class)</span>
+<span class="fc" id="L27">                .block();</span>
+<span class="fc" id="L28">        return Integer.parseInt(JsonResponseFrom);</span>
     }
+
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

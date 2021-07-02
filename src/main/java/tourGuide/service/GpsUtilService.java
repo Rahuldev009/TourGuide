@@ -17,6 +17,10 @@ import java.util.UUID;
 public class GpsUtilService {
     private Logger logger = LoggerFactory.getLogger(GpsUtilService.class);
 
+    /**
+     * find list of all attractions
+     * @return list of all attractions
+     */
     public List<Attraction> getAttractions() {
         WebClient.Builder webClientBuilder = WebClient.builder();
         String jsonResponseFromGetAttraction = webClientBuilder.build()
@@ -33,6 +37,11 @@ public class GpsUtilService {
         return attractionList;
     }
 
+    /**
+     * Find user current location
+     * @param userId unique Id of the user
+     * @return user's current location
+     */
     public VisitedLocation getUserLocation(@RequestParam UUID userId) {
         WebClient.Builder webClientBuilder = WebClient.builder();
         String JsonResponseFrom = webClientBuilder.build()
