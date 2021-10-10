@@ -7,7 +7,7 @@ Framework:
 * Jacoco
 * Docker
 
-Structure
+## Structure
 The application is divided into three microservices for the following tasks:
 
 https://github.com/rahuljajoria/TourGuide: manages user data and sends requests to the other microservices
